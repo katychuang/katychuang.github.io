@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Kat Y. Chuang, Ph.D.">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+        <title>Big Data in Fashion</title>
+        <link rel="stylesheet" type="text/css" href="/css/hemingway.css" />
+        <link rel="stylesheet" type="text/css" href="/css/white.css" />
+        <link rel="stylesheet" id="style-css" href="/css/social-icons.css" type="text/css" media="all">
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito%3A300&amp;ver=20121005" type="text/css" media="all">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-2990063-3'], ['_trackPageview']];
+            (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="inside">
+                <div id="search">
+                    <form method="get" id="sform" action="/search.html">
+                        <div class="searchimg"></div>
+                        <input type="text" id="q" value name="q" size="20" class="searchbox" />
+                    </form>
+                </div>
+
+                <h2><a href="/">Kat Chuang</a></h2>
+                <div class="links">
+                    <!--a href="mailto:person" class="toplink" target="_blank"><img src="/images/email.png" /></a-->
+                </div>
+                <div id="social">
+                    <a href="https://twitter.com/katychuang" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+                    <a href="https://plus.google.com/108870060325793264627" rel="tooltip" title="G+" class="googleplus">G+</a>
+                    <a href="https://github.com/katychuang" rel="tooltip" title="Github" class="github">Github</a>
+                    <a href="http://katychuang.wordpress.com" class="wordpress"></a>
+                    <a href="http://www.delicious.com/katsupnfries" rel="tooltip" title="Delicious" class="social-delicious">Delicious</a>
+                    <a href="http://www.youtube.com/katsupnfries" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+                    <a href="http://www.pinterest.com/katychuang" rel="tooltip" title="Pintrest" class="pintrest">Pinterest</a>
+                    <a href="https://www.linkedin.com/in/katychuang" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+                    <a href="http://context.katychuang.com" class="tumblr"></a>
+                    <a href="http://forrst.com/people/katychuang" class="forrst"></a>
+                    <a href="http://stackoverflow.com/users/1470114/katychuang" class="stackoverflow"></a>
+                    <a href="http://instagram.com/katsupnfries" class="instagram"></a>
+                    <a href="http://flickr.com/photos/katychuang" class="flickr"></a>
+                </div>
+                <div class="meetuplinks">
+                    <ul>
+                      <li>Find me at: </li>
+                      <li><a href="http://haskell-workshop.github.io">Haskell Workshop</a></li>
+                      <li><a href="http://nycpython.com">NYC PUG</a></li>
+                      <li><a href="http://meetup.com/nyc-pyladies">NYC PyLadies</a></li>
+                      <li><a href="http://meetup.com/nyc-open-data">NYC Open Data</a></li>
+                      <li><a href="http://pydata.org">PyData</a></li>
+                      <li><a href="http://sbp-conference.org">SBP Conference</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Big Data in Fashion</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on April 17, 2013 with labels: <a href="/label/fashion/">fashion</a></i>
+        </small></div>
+        <br>
+        <p>Here is a write up about my PyData Fashion Talk and the project features. The Python Data community was very encouraging about <a href="http://katychuang.github.io/PyData2013-BigDataFashion/">my talk</a> about big data in fashion. It took a lot of courage to stand in front of a big room of strangers, showing then new ideas especially because it’s a new topic that I wasn’t even sure would hold up with typical scientific methods. Several audience members chatted with me afterwards, telling me how excited they were to see a different application of scientific computing, and even more were welcoming about my outreach efforts to bring more women into the fold. I really hope that this shows women how computing is not something to run away from!</p>
+Now onto the technical details. This app is hosted on Google App Engine, with a mashup of several libraries (Flask, GeoBases) and data coming from Twitter’s API.
+<h2 id="outline">
+Outline
+</h2>
+<p>Since this will be a fairly long blog post, I’m breaking out this tiny outline so you can see which section is relevant to you and allow you to skip ahead if you like.</p>
+The main phases of this project include:
+<ol>
+    <li>
+Idea generating - figuring out what to make.
+</li>
+    <li>
+Development - lots of trial and error. experiments, basically.
+</li>
+    <li>
+Plugging into the community - asking for help, getting feedback, improving on features.
+</li>
+    <li>
+Demos of work and sharing with the community.
+</li>
+</ol>
+<h3 id="phase-1.-research-amp-gathering-functional-requirements">
+Phase 1. Research &amp; Gathering Functional Requirements
+</h3>
+<p>Even though I first had an idea for a research study about seeking information about fashion back <a href="http://katychuang.github.io/2008/08/04/fashion/">almost 5 years ago</a>, it wasn’t in the form of making a website. At the time, I didn’t know any faculty members who would support such a frilly topic because they were all studying <em>serious</em> topics such as medical text summarization, scholarly communication patterns, software development processes, digital library information seeking, youth librarian services, and so on.</p>
+<p>Despite that, with my super nerdy training in UX and access to a large academic library, the first step is always research (lots of reading!) to figure out what fashion was all about. I read many fashion books <a href="http://www.goodreads.com/review/list/112362-kat?shelf=fashion">in the spring and summer of 2010</a> to understand some of the terminologies and subspecialties of the fashion industry. It looked like most of the “computing power” was in helping designers convert an idea to a pattern using computer aided-design (CAD). That didn’t seem relevant to my interest in making large quantities of information easily accessible.</p>
+<p>The idea fell off my plate at that point, because of my candidacy exam and preparing to speak at several conferences that fall about my research of online health support communities. Even though I signed up at fashion blogger accounts like <a href="http://lookbook.nu/katsupnfries">lookbook.nu</a> and <a href="http://katsupnfries.polyvore.com/">polyvore</a>, I was mostly a lurker rather than active participant. Over the years I noticed fashion blogs becoming more mainstream, many youtube tutorials and vlogs about makeup cropping up. I was really focused on my dissertation research to the extent that people gave me advice on grooming. I usually refer to this grooming vs time in grad school chart:</p>
+<p><a href="http://www.phdcomics.com/comics/archive.php?comicid=1185"></p>
+<p><img alt src="http://www.phdcomics.com/comics/archive/phd061209s.gif" /></p>
+<p></a>This became the burning question of my project: <em>How can you keep up with the diluge of fashion trend information when it’s not a priority?</em></p>
+<p>My response was to create an information resource. An executive summary, if you will.</p>
+Then came developing <a href="http://programmers.stackexchange.com/questions/118376/functional-or-non-functional-requirement">functional requirements</a> to clarify what my app would do and later how to do it. The sample size was 1 (myself) and number of developers was 1 (myself), so it was in everyone’s best interest to keep it a simple project. Here were some requirements I came up with:
+<ul>
+    <li>
+Use python language.
+</li>
+    <li>
+Make use of natural language processing packages (i.e. NLTK).
+</li>
+    <li>
+Find out who top influencers are (i.e. should I pay attention to designers or editors or friends?)
+</li>
+    <li>
+Find a way to define fashion keywords and concepts (i.e. what is stunna glasses)
+</li>
+    <li>
+Provide color guides for dressing appropriately with the season (i.e. rust colors for autumn, highlighter neons for summer).
+</li>
+    <li>
+Connect with social data for realtime, up-to-date information.
+</li>
+    <li>
+Keep costs low (find free hosting).
+</li>
+</ul>
+<h3 id="phase-2.-coding-begins">
+Phase 2. Coding begins
+</h3>
+<p>I’ve tried developing it on PythonAnywhere.com first because there I could avoid worrying about python version and other configuration settings. PythonAnywhere.com offers a cloud console for developing python applications (or scripts) and free hosting for your app. With the free accounts, you won’t be able to stream data from external APIs, however as a beginner you should focus on understanding the structure of your web framework and how templating systems work.</p>
+<p>First, I tried django web framework on PythonAnywhere. It is touted as one of the most popular web frameworks available for python, on level with ruby on rails. It is quite easy to set up once you get the hang of it. Helps to have someone do this with you for the first time, and then you should practice by yourself a few times to understand how all the pieces fit together. The downside was that I wasn’t sure how to run cron jobs to download data.</p>
+<p>Next, I moved this code over to google app engine for their ability to run cron jobs. To set the bar higher for myself, I converted the template over to flask, because I didn’t need to use the Object Relation Mapping (ORM) and that was an unnecesary feature.</p>
+<p>I had a template and some “sample apps” to try building.</p>
+<p><a href="http://katychuang.pythonanywhere.com"><img alt src="https://lh4.googleusercontent.com/-KMvgM7jn7_s/UTFgHKksKBI/AAAAAAAAGi0/YV6mOM8SPkI/w650-h426/Screen+Shot+2013-03-01+at+9.12.08+PM.png" /></a>One of these was using NLTK to find most common words.</p>
+<img alt src="https://lh5.googleusercontent.com/-_m9JKnsK5Vs/UTwqSkD24rI/AAAAAAAAGs0/BIeyNL1Q7Uw/w651-h511/Screen+Shot+2013-03-10+at+1.37.39+AM.png" />
+<h3 id="phase-3.-community-amp-outreach">
+Phase 3. Community &amp; Outreach
+</h3>
+<p>During this time I met lots of brilliant people who offered their time in advising me on coding practices, strategies for scaling, etc.</p>
+Some of the important milestones:
+<ul>
+    <li>
+Starting a NYC chapter of Pyladies to create a supportive environment
+</li>
+    <li>
+Organizing hacking sessions to stay focused
+</li>
+    <li>
+Submitting my idea as conference talk proposals (keeping pressure on to stay with the momentum)
+</li>
+</ul>
+Will elaborate on each of these later… this is a lot of writing so far!
+<h3 id="phase-4.-demos">
+Phase 4. Demos
+</h3>
+<p>As part of my talk, here’s a map showing where users are tweeting from around the world about #Fashion: <a href="http://style-buzz.appspot.com/where">http://style-buzz.appspot.com/where</a></p>
+    </div>
+</div>
+
+<hr class="hide">
+
+<div id="secondary">
+    <div class="inside">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'katychuang'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+<hr class="hide">
+
+
+        <div id="ancillary">
+            <div class="inside">
+                <div class="block first">
+                    <div class="widget">
+                        <h2>Sections</h2>
+                        <div class="menu-pages-container">
+                            <ul id="menu-pages" class="menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/colophon/">Colophon</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/portfolio/">Portfolio</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/talks/">Talks</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/writings/">Writings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="textwidget">
+                            <small>Made with <a href="http://jaspervdj.be/hakyll/" class="links">Hakyll</a>. Hosted on <a href="http://github.com" class="links">Github</a>.</small><br />
+                            <small>© Katherine Y. Chuang, Ph.D.</small>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <br>
+                        <a href="/rss.xml" class="toplink" target="_blank"><img src="/images/rss.png"></a>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Recent Articles</h2>
+                        <ul>
+                            <li><a href="/2013/12/haskell/" title="Hakyll">Hakyll</a></li>
+<li><a href="/2013/12/recap/" title="Year of Code">Year of Code</a></li>
+<li><a href="/2013/12/sbp/" title="Intro to Behavior-Cultural Modeling &amp; Prediction">Intro to Behavior-Cultural Modeling &amp; Prediction</a></li>
+<li><a href="/2013/11/technical-writing/" title="Technical writing tip">Technical writing tip</a></li>
+<li><a href="/2013/11/django-apis/" title="Django + APIs  for online communities">Django + APIs  for online communities</a></li>
+<li><a href="/2013/10/planning-workshops/" title="Tips for planning a workshop">Tips for planning a workshop</a></li>
+<li><a href="/2013/07/unintended-consequences/" title="Stories of Unintended Consequences">Stories of Unintended Consequences</a></li>
+
+                        </ul>
+                        <div class="textwidget">
+                            <a href="/archive/" class="readmore">see all</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li class="cat-item"><a href="/label/beauty/" title="View all posts filed under beauty">Beauty</a></li>
+                            <li class="cat-item"><a href="/label/editorial/" title="View all posts filed under Editorial">Editorial</a></li>
+                            <li class="cat-item"><a href="/label/fashion/" title="View all posts filed under Fashion">Fashion</a></li>
+                            <li class="cat-item"><a href="/label/haskell/" title="View all posts filed under Haskell">Haskell</a></li>
+                            <li class="cat-item"><a href="/label/pydata/" title="View all posts filed under Life on PyData">PyData</a></li>
+                            <li class="cat-item"><a href="/label/tutorial/" title="View all posts filed under Tutorial">Tutorial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <hr class="hide">
+        <br class="clear">
+    </body>
+</html>

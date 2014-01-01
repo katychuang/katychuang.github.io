@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Katherine Chuang</title>
+        <link>http://katychuang.com</link>
+        <description><![CDATA[RSS feed for Kat's blog]]></description>
+        <atom:link href="http://katychuang.com/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Mon, 30 Dec 2013 04:00:10 UT</lastBuildDate>
+        <item>
+    <title>Hakyll</title>
+    <link>http://katychuang.com/2013/12/haskell/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Hakyll</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on December 30, 2013 with labels: <a href="http://katychuang.com/label/haskell/">haskell</a></i>
+        </small></div>
+        <br>
+        <p>Testing hakyll</p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Mon, 30 Dec 2013 04:00:10 UT</pubDate>
+    <guid>http://katychuang.com/2013/12/haskell/</guid>
+</item>
+<item>
+    <title>Year of Code</title>
+    <link>http://katychuang.com/2013/12/recap/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Year of Code</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on December 29, 2013 with labels: <a href="http://katychuang.com/label/fashion/">fashion</a>, <a href="http://katychuang.com/label/editorial/">editorial</a></i>
+        </small></div>
+        <br>
+        <p>Looking back at accomplishments, 2013 was a phenomenal year. Life happens at a much faster pace when you are not writing a book. Contributions to open source soared this year, as I learned to deploy apps written in python, javascript, and haskell. Was able to share some of these tips through workshops. What helped increase effectiveness of others helping me was communicating through through <a href="http://en.wikipedia.org/wiki/Git_(software)">decentralized version control system</a> (i.e. Github) and mindful authoring of <a href="http://stackoverflow.com/a/43631/1470114">commit messages</a>.</p>
+<p><strong>Open Data Applications</strong></p>
+<p>The CIO of Puerto Rico government uses this app from time to time as it shows reports of <a href="http://puertorico.herokuapp.com/">education statistics</a> from Open Data source. Only found out because I heard through a friend about complaints that the heroku server was down. It’s really cool to make something that others find useful. This project was made during TechSummitPR, a fun day filled with learning Django + D3.js deployment and making new friends. Looking back, Flask would’ve been appropriate.</p>
+<div class="figure">
+<img src="http://katychuang.files.wordpress.com/2013/08/9516894845_261dc4b1ee.jpg" alt="D3 Map and charts" /><p class="caption">D3 Map and charts</p>
+</div>
+<p>To this day it boggles my mind that some data scientists believe in a narrow definition of data science work - creating new models to interpret data or producing a chart. They do not believe plugging the results into a communicable form as “true science”. Being able to produce a D3.js graphic is not quite enough for communicating to a broad audience, which can include people without domain knowledge. Science is about reproducibility. Scientists’ obligation to society is disseminating knowledge - based on good presentation of material.</p>
+<p>What I loved about this project, was the ability to create a chart for Spanish-speaking population using open source + open data without fluent Spanish skills. Highlighting a province was so simple <code>fill:red</code> yet conveys intuitive meaning to all language speakers.</p>
+<p><strong>Building a community website</strong></p>
+<p>Initially signed up to volunteer my time to work on the redesign of the <a href="http://pydata.org">PyData.org</a> conference website. With minimal experience in django development, it was a challenge to build a community website - holy cow, right? That’s a lot of moving parts. Regardless of the effort and time involved, pursuit of this mighty goal was motivated by prioritizing community building efforts. I wanted the conference attendees to get a good impression of the community, and feel welcomed and part of the community. Since many of their first impression is through the website, it’s important to try my best.</p>
+<p>As I only had exposure to theory of community websites at that point, I dove into the deep end to figure out the backend first. There’s a lot to consider on the front end as well. Conference individuals tend to check the schedule on their phone, yet read about the speakers on their computer before the conference. Informal usability tests are used, since I had a super lean agile method. Although being the primary person contributing to the full stack of production code takes 24/7 attention, most of the hours are in the middle of the night, weekends and lunch hours. <em>Tip:</em> Pad development time estimates to be on the safe side.</p>
+<p>It was my first time working with Linux, and being the go-to person for all production related questions.</p>
+<div class="figure">
+<img src="http://farm6.staticflickr.com/5538/11630428604_23a82be309_b.jpg" alt="GitStats" /><p class="caption">GitStats</p>
+</div>
+<p><strong>UIs for Streamlining tedious work</strong></p>
+<p>I rebuilt an admin console, which was <a href="http://pando.com/2013/08/22/boxed-is-more-than-an-costco-delivery-app-its-a-mobile-commerce-platform-built-by-mobile-gaming-experts/">featured in Pando Daily</a>, but due to contract stipulation the company gets the credit in the news. Regardless, it was a wonderful opportunity to learn how to work with Node.js/Express/Backbone/MongoDb and take over dual role of product design and front end developer on a team of 12 back end developers.</p>
+<p>The person managing inventory needed visual cues to track movement, to figure out what to buy, and also needed better ways to enter product information. It was a roll back to library school training. Not only did I help improve the ontology, introduce metadata standards, I built the system where it’d be housed.</p>
+<div class="figure">
+<embed src="http://pandodaily.files.wordpress.com/2013/08/screen-shot-2013-08-09-at-12-31-54-pm.png?w=584&amp;h=408" /><p class="caption">Data Grids</p>
+</div>
+<div class="figure">
+<embed src="http://pandodaily.files.wordpress.com/2013/08/screen-shot-2013-08-22-at-3-52-13-pm.png?w=584&amp;h=367" /><p class="caption">Charts</p>
+</div>
+<p>Best advice I can give other coders who want to make a difference in the world is to is to reach outside your comfort zone, help those who don’t have the same background. Take on new challenges often. Volunteering for projects was a great way to get hands-on experience and exposure to new techniques that others use. The pressure of someone expecting you to build a feature helps keep you on schedule.</p>
+<p>The main takeaway from the year is to have a good set up for working, from having the right equipment to removing distractions all help with productivity. I also find value in discussing ideas with others as talking it out will eliminate the bad ideas right away. Spend consistent time to learn new skills - repetitive practice makes for helping your brain remember things.</p>
+<p><strong>From Outsider to Community Leader</strong></p>
+<p>I am still relatively new to open source community, having spent the last decade in the ivory tower. Many a lonely day passed while writing <a href="http://katychuang.wordpress.com/dissertation">dissertation on health social media</a> and <a href="http://katychuang.wordpress.com/publications">publishing to academic journals</a>. Does anyone outside of academia read them or find this work useful? Such questions made me look for a community to be part of, to contribute to with more hands on approach. Nothing charges up an ENFP like a mission in helping underdogs succeed:</p>
+<ul>
+<li>Evening out the gender ratios in tech, particularly introducing diversity to scientific computing.</li>
+<li>Teaching basic computer literacy skills, including installations &amp; git commands.</li>
+</ul>
+<p>There’s unfortunately no glamour in helping those in need but they are the ones who need it the most, and sometime they are too shy to ask for help. To figure out what your community needs, listen to them. Listen to the problems they complain about and then find a way to connect them with the answer or solution.</p>
+<p><strong>Big Data in Fashion</strong></p>
+<p>This hobby project started as an intervention of sorts by two separate roommates pointed out the value of being female in NYC and having a high level of personal grooming and presentation. As most academics, I was so focused on research that I would daily be wearing mismatched, ill-fitting, non-flattering clothing. I needed a solution for quickly ramping up fashion knowledge; enter big data.</p>
+<p><a href="big-data-in-fashion">Blogged about some of the technical project details early in the year</a>. The research and study involved led to building a website to <a href="http://katychuang.pythonanywhere.com/style">forecast peoples sentiment about fashion items</a> to crowdsource answers for my fashion questions. What is appropriate work wear? What is hipster? How do so many girls my age know to wear striped shirt with skinny jeans and knee length boots? Where does the informaton originate from? What are the cultural values for clothing items?</p>
+<p>This project would have been heavily based on natural language processing. To build a controlled vocabulary learning set, compiled a <a href="http://www.pinterest.com/katychuang/style-guides/">pinterest board with the many styles terms available</a>. This project would also require mapping conversations to break down the geographical differences as well. There’s unfortunately not much geo-location information on twitter, but with a big enough dataset you can see that people tweet from all over the world about fashion.</p>
+<div class="figure">
+<embed src="http://katychuang.files.wordpress.com/2013/03/screen-shot-2013-03-30-at-11-02-31-pm.png?w=731" /><p class="caption">FashionTweets</p>
+</div>
+<p>Cherry on top to the experience for speaking at PyData was chatting with a data scientist from One Kings Lane! Retail forecasting is legit!</p>
+<div class="figure">
+<img src="http://s18.postimg.org/4psc6k5vt/ONE_KINGS_LANE_LOGO.jpg" alt="One Kings Lane" /><p class="caption">One Kings Lane</p>
+</div>
+<hr />
+<p>If you’re on your journey in the tech space and need help, check out <a href="http://stackoverflow.com">StackOverflow</a>, or relevant IRC channel, mailing lists, or your local Hacker Hours. There are so many nice people in the tech community but they tend to be introverted so you need to be proactive in reaching out to them. The best way to contact them is through technology, perhaps their twitter. If your question can’t be asked in 140 char then maybe you need to work on asking a specific question :)</p>
+<p><strong>Helping friends through troubled times</strong></p>
+<p>Sometimes friends needs help resetting their life after a bad breakup. I take them running outside and make them too wearied to mope - this summer I coached friends from couch potatoes to 5k runners.</p>
+<div class="figure">
+<img src="http://s13.postimg.org/6mq2ou1c7/16_BEST_SPAN_tmag_Article.jpg" alt="running" /><p class="caption">running</p>
+</div>
+<p>Last but not least, most memorable of this year is friends ask <em>me</em> for fashion advice! Guess when you talking about matching your outfit to text editor, it’s saying something.</p>
+</iframe>
+
+
+
+<p>Ready for a fulfilling 2014!</p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Sun, 29 Dec 2013 18:06:57 UT</pubDate>
+    <guid>http://katychuang.com/2013/12/recap/</guid>
+</item>
+<item>
+    <title>Intro to Behavior-Cultural Modeling &amp; Prediction</title>
+    <link>http://katychuang.com/2013/12/sbp/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Intro to Behavior-Cultural Modeling &amp; Prediction</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on December 28, 2013 with labels: <a href="http://katychuang.com/label/tutorial/">tutorial</a>, <a href="http://katychuang.com/label/pydata/">pydata</a></i>
+        </small></div>
+        <br>
+        <p>This evening while have a lovely conversation over dinner with a friend and fellow PyLady, we talked extensively about how one can choose datasets for building data-heavy apps that provide social good.</p>
+<p>There are quite a few pages to check out in this research area.</p>
+<p><strong>Global Database of Events, Language, &amp; Tone (<a href="http://gdelt.utdallas.edu/">GDELT</a>)</strong> GDELT is the only global all-countries multi-decade georeferenced daily event dataset available for open research. You can download the entire quarter-billion-record dataset today, stretching back to January 1, 1979 and running to present.</p>
+<p>Social Computing, Behavioral-Cultural &amp; Prediction (SBP) Conference is still accepting submissions for working on this dataset through Jan 12th. Winners will be invited to present their work at the SBP 2014 main conference in Washington DC, and their travel expenses reimbursed by SBP for up to US$1000. Information available at http://sbp-conference.org/challenge/</p>
+<p>Almost a year ago, Hilary Mason put together a <a href="http://bitly.com/bundles/hmason/1">BitLy Bundle</a> of open data resources. It’s still a good place to look for datasets.</p>
+<p>In 2014 we can see a lot more socially-relevant and commercially viable research studies taking place, from the availability of large datasets to commercial applications of this research, such as <a href="http://www.copyblogger.com/google-hummingbird/">Google’s Hummingbird Algorithm</a>. Researchers figured out that when you have an ambiguous pronoun “it” in a query, the query before it can provide context. The linked article gives the example of looking for pictures of the TransAmerica Bulding and then wanting to know the height of the building.</p>
+<p>Marcia Bates was genius when she described human information seeking behavior as “<a href="http://pages.gseis.ucla.edu/faculty/bates/berrypicking.html">berry picking</a>”, where we might start with one question and serendipitously sidetrack to a related tangent. The value of social datasets lets you take a step in the direction of Google information retrieval researchers, in figuring out probabilities of search behavior patterns based on many datapoints and thusly provide better service for your customers.</p>
+<p>All this research made possible with algorithms and coding. See data structures visualized <a href="http://www.cs.usfca.edu/~galles/visualization/Algorithms.html">here</a>.</p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Sat, 28 Dec 2013 18:06:57 UT</pubDate>
+    <guid>http://katychuang.com/2013/12/sbp/</guid>
+</item>
+<item>
+    <title>Technical writing tip</title>
+    <link>http://katychuang.com/2013/11/technical-writing/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Technical writing tip</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on November 13, 2013 with labels: <a href="http://katychuang.com/label/tutorial/">tutorial</a></i>
+        </small></div>
+        <br>
+        <p><strong>tl;dr. </strong>A picture is worth a thousand words.</p>
+<p>Oftentimes [web] developers need to write instructions for humans, to communicate technical concepts to end-users that use the code they wrote. Often times the human who has little familiarity with code languages will find the messages cryptic. Adding a lot of technical detail is impressive and all but it doesn’t help to accomplish the goal of communicating to humans about technology.</p>
+<p><span style="line-height:1.714285714;font-size:1rem;">How to write a good step by step tutorials? The </span><strong style="line-height:1.714285714;font-size:1rem;">#1 Tip: Describe the context. </strong><span style="line-height:1.714285714;font-size:1rem;">Pictures are not required but can help so much.</span></p>
+<p><strong>How do take screenshots: </strong>Popular browsers (chrome, firefox) have extensions (i.e. <a href="http://awesomescreenshot.com">Awesome Screenshot</a>) for taking screenshots of webpages. Install that, and use it for marking up the image. It gets your user to focus on the exact place of the image that you’re talking about. You could also label them (i.e. 1,2,3,… or A,B,C,…) if you have multiple things to talk about.</p>
+<p>Annotated screenshots makes it convenient for me to say with little bias that AWS has terrible UI/UX.</p>
+<div class="figure">
+<img src="http://katychuang.files.wordpress.com/2013/10/ec2.png" />
+</div>
+<p>Annotated screenshots helped me emphasize to folks the need to install a particular version of OSX CLI.</p>
+<div class="figure">
+<img src="http://haskell-workshop.github.io/tutorials/osx/cli_mavericks.png" />
+</div>
+<p><strong>Here are some examples of diagrams that have worked throughout history:</strong></p>
+<p><strong>Describing Steps</strong></p>
+<p><img class="alignnone" alt src="http://theelephantmagazine.files.wordpress.com/2011/09/origami_elephant-1.gif" width="1099" height="798" /></p>
+<p><strong>Describing how pieces fit into a whole</strong></p>
+<p><img class="alignnone" alt src="http://upload.wikimedia.org/wikipedia/commons/e/e5/Diagram_of_the_human_heart_(cropped).svg" width="520" height="520" /></p>
+<p>Notice that both of these use multiple colors, arrows, and different types of lines to show different concepts. Quick sketches such as these are are not the same as blueprints, which are another form of graphical representation that requires precise measurements and much longer time to produce at a decent quality.</p>
+<p><em>Disclaimer: My general experience as a writer includes providing editing feedback for scholarly publications, writing technical &amp; business proposals, creating UI/UX deliverables to various stakeholders, writing README files for open source projects, writing up issue tickets, and providing QA-related evidence. As a reader I have critiqued many a textbook diagram and DIY instruction manual. </em></p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Wed, 13 Nov 2013 04:00:10 UT</pubDate>
+    <guid>http://katychuang.com/2013/11/technical-writing/</guid>
+</item>
+<item>
+    <title>Django + APIs  for online communities</title>
+    <link>http://katychuang.com/2013/11/django-apis/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Django + APIs  for online communities</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on November  4, 2013 with labels: <a href="http://katychuang.com/label/tutorial/">tutorial</a>, <a href="http://katychuang.com/label/pydata/">pydata</a></i>
+        </small></div>
+        <br>
+        <p>No matter how you look at it, building an online community is not easy even if your group members have similar interests. You might ask yourself, how can you build a sense of community when everyone uses a different channel of communication? How can you braid together different channels to let your members have their own voice yet still have the group identity?</p>
+<div class="figure">
+<embed src="http://katychuang.files.wordpress.com/2013/11/07c3d-6braid.jpg?w=367&amp;h=374" /><p class="caption">Braided conversations</p>
+</div>
+<p>That is where an application programming interface (API) becomes important, it is the pattern of your weave that keeps your braid consistent. It is quite easy to set up an application that takes in data with an API, using the Django framework and available API wrappers. The framework helps with the server-client data flow and the API wrapper makes it easier to work with an API.</p>
+<div class="figure">
+<embed src="http://katychuang.files.wordpress.com/2013/11/screen-shot-2013-11-05-at-2-01-33-am.png?w=700" /><p class="caption">My Django-Snapbook Commits</p>
+</div>
+<p>Six months ago was the beginning of my journey in learning how to work with APIs other than Twitter, by making a web application during a hackathon. I created <a href="https://github.com/katychuang/django-snapbook">Django-Snapbook</a>, in effort to show NYC PyLadies how to use various APIs (instagram, twitter, NYTimes, Pearson Dictionary) and do web development in Python. While it was disappointing that nobody showed up to the event, that experience of working with APIs came in useful at another hackathon couple months later where I built another application for showing public education statistics, <a href="https://github.com/katychuang/techsummitpr">Data Joven</a>. My first taste with open data, and using D3.js to display maps. It was awesome.</p>
+<div class="figure">
+<embed src="http://katychuang.files.wordpress.com/2013/11/screen-shot-2013-11-05-at-3-01-26-am.png?w=700&amp;h=540" /><p class="caption">Django-Snapbook, search results for DKNY</p>
+</div>
+<p>In recent months Twitter turned off their version 1, which means that you have to use OAuth to connect with their service. Increases security but still a pain to deal with.  I really wanted to incorporate the voices of PyData Community on twitterverse into the PyData website, because (1) twitter is uniquely designed to let folks have their own voice because of the 1 author write permissions, and (2) twitter is also uniquely designed to show people talking about the same topic with #hashtags.  I ended up using <a href="https://github.com/coagulant/django-twitter-tag">Django-Twitter-Tag</a> plugin.</p>
+<div class="figure">
+<embed src="http://katychuang.files.wordpress.com/2013/11/screen-shot-2013-11-05-at-2-37-11-am.png?w=700&amp;h=543" /><p class="caption">PyData Community (twitterverse embedded into main site)</p>
+</div>
+<p>Photos is another great way to have folks contribute yet have their own unique voices. <a href="http://stuvel.eu/flickrapi">flickrapi</a> is a nice wrapper to connect with <a href="http://www.flickr.com/services/api/">Flickr’s API</a>, as written up in this <a href="http://www.jjude.com/2008/06/accessing-flickr-photos-with-python/">nifty starter guide</a>.</p>
+<p><a href="https://github.com/Instagram/python-instagram">Python-Instagram</a> lets you connect to Instagram’s database of images, with which you can use to <a href="https://github.com/katychuang/Pyladies-ImageAnalysis">analyze images</a> or make a slideshow.</p>
+<div class="figure">
+<embed src="http://katychuang.files.wordpress.com/2013/11/screen-shot-2013-11-05-at-2-42-30-am.png?w=500&amp;h=302" /><p class="caption">Using instagram API with iPython Notebook, SciKit-Image</p>
+</div>
+<p>On the front end, you could use a number of javascript plugins, including but not limited to jQuery, Bootstrap, MooTools or plugins built on top of those libraries.</p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Mon, 04 Nov 2013 18:06:57 UT</pubDate>
+    <guid>http://katychuang.com/2013/11/django-apis/</guid>
+</item>
+<item>
+    <title>Tips for planning a workshop</title>
+    <link>http://katychuang.com/2013/10/planning-workshops/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Tips for planning a workshop</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on October 12, 2013 with labels: <a href="http://katychuang.com/label/tutorial/">tutorial</a></i>
+        </small></div>
+        <br>
+        <blockquote class="twitter-tweet" lang="en"><p>
+Photo: <a href="https://twitter.com/NYCPyLadies"><span class="citation">@nycpyladies</span></a> workshop on git/github was amazing <a href="https://twitter.com/search?q=%23pyladies&amp;src=hash">#pyladies</a> <a href="https://twitter.com/search?q=%23git&amp;src=hash">#git</a> <a href="https://twitter.com/search?q=%23workshop&amp;src=hash">#workshop</a> (at Tipping Point Workspace) <a href="http://t.co/kRfk2kI5MR">http://t.co/kRfk2kI5MR</a>
+</p>
+— Kat Chuang (<span class="citation">@katychuang</span>) <a href="https://twitter.com/katychuang/statuses/393396694177808384">October 24, 2013</a>
+</blockquote>
+<script async src="http://katychuang.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Recently planned a number of workshops to help <a href="http://pyladies.com">pyladies</a> learn how to get started with coding, source control, and social coding. Because the number of signups reached between 50-60, and over 20 showed up in an under-represented demographic, it seems like I stumbled onto something right!</p>
+<p><em>Disclaimer:</em> It wasn’t easy to do it all by myself – it would be a lot more manageable to plan an event with a group of folks to share the tasks. In the worst case it is still possible to pull off a successful event, especially if you have the right tools to stay organized, like <a href="http://getblimp.com">Blimp</a> shown in the screenshot below. Some of my tips for finding space is specific to NYC, where space usually gets booked up beforehand. I don’t know if there exists a good guide for planning tech coding workshops out there, there probably are… these are just my thoughts from the grassroots perspective to help other software developers take leadership roles in their community.</p>
+<div class="figure">
+<img src="http://farm8.staticflickr.com/7452/10685438806_c54d26914f.jpg" alt="GetBlimp.com" /><p class="caption">GetBlimp.com</p>
+</div>
+<p><strong>Project management tools are helpful! :) Blimp gifted NYC PyLadies with free PRO account to help with planning more events. Great UI/UX for managing a big to do list.</strong></p>
+<h3 id="weeks-or-more-before-the-event.">2 weeks or more before the event….</h3>
+<p>It’s helpful to start with a general topic in mind and shave it down, like the way Michaelangelo can take a block of stone and chip away at it until it looks good. This way you know what the event will be about.</p>
+<p><strong>1. Find a venue.</strong> You can reach out to local coworking spaces, startups, companies, etc to tell them about your mission and how they can help you by contributing space for a couple of hours. Start reaching out as soon as possible to book space, so that you know how many seats are available and if transportation is convenient. It could also be helpful to reach out to companies just to let them know you’ll have a need in the near future and compile a database for your group to reach out to in the future. A good venue will have good space design, similar to how you’d pick a hotel room for it’s noise level, lighting, whether it’s comfortable, and if there’s restrooms, easy to get into, has wifi, etc.</p>
+<p>You can also look for sponsors to help with the budget for the event, if you’re going to provide food.</p>
+<p><strong>2. Decide on a workshop format.</strong> Figure out whether you want a casual hackathon style or formal lecture style event. I generally like to schedule 2 hrs in the evening, because it is convenient for people who work full time jobs. Also, the for volunteers this is max 3 hrs spent setting up, instructing, cleaning. For the attendees a minimum of at least 1 hr learning and 1 hr social bonding with peers. Learning to code well is very much based on association of concepts and picking up on the vernacular and conventions so the social environment helps in implicit ways as attendees work on introductory exercises together. Once you know how to code in a language, then it’s easy to pick up another because you learned the skills along the way to become an independent problem solver. As a beginner the number of choices in how to tackle things is what makes a problem seem impossible so these workshops could be designed to decrease the frustrations.</p>
+<p>Regardless of format you’ll need to know approximately how many volunteers (TA’s) are needed for instruction or mentorship. Beginners have a lot of questions and some of them can be very custom to their scenario (i.e. OSX 10.9 introduces compiling errors because of the C libraries that come shipped with the OS software, but not every student will have that version of OS), and also it helps to group attendees into smaller groups. I like to plan for the ratio of 1 volunteer to 3 attendees, in case some cannot show up last minute and it extends unto 1:5.</p>
+<p>If you’re not sure what would be a good decision, make mini polls for each decision. They can be casual, like bouncing an idea off a friend. People are quite receptive to being asked their opinion, so don’t be shy. Some other questions might include, do you want to charge attendees or if you want to be selective about who is allowed to attend. I don’t like to charge for PyLadies events because it presents yet another barrier.</p>
+<p><strong>3. Marketing.</strong> Write down your description of the event as you vision it, what you expect attendees to accomplish, what they should bring, what they’ll get out of attending, etc. Meetup.com works great for this because the event page has comments to let folks discuss the event before, during, and after event; another helpful website to use is Eventbrite.com, which does not require your attendees to be part of a group. You can also go with Facebook events though I don’t see that happening as much for tech events. Once you have an “event” set up on one of these sites, share the link. I usually send a tweet out once a week until the week before, and then every 2-3 days until the day with different messages to show that folks will get out of the event. You can ask for volunteers to help with this as well.</p>
+On social media you can use hashtags and in case you don’t know, it’s the #topic looking things so that your announcement is easy to find. Tell your friends about the event you’re hosting. Sometimes folks are excited enough about the event to help you share the word.
+<h3>
+The week before the event….
+</h3>
+<p><strong>4. Don’t let the ball drop.</strong> You’ll see how many people signed up. By now you should have at least some instructors or volunteers signed up, and you can either reach out for more volunteers or signups. The week before an event usually is a daily check of how the numbers change and adjust accordingly to estimate the same ratio of volunteer:attendee. Based off my experience you generally can take the 50% cutoff at this point to use as a metric for the show rate day off, but it’s not always true.</p>
+<p><strong>5. Topic should be fairly well formulated now.</strong> You’ve had at least a week to think about how the content should be delivered, and by who. The speaker(s) should prepare some written material to share with the group. This could be in the form of slides, a github repo, a gist, a web page, wiki page, etc etc. There are minor pros/cons of each specific one but the main idea is to make it easy to access so that people can follow along more easily through the 2 hr workshop. If you have the attendees work on exercises, it helps them to have the instruction steps written down.</p>
+<strong>6. Reminders.</strong> Send a reminder/info email to your volunteers with some details about the agenda, the topic, etc. You want them to know what to expect during the event so that they can be their most helpful.  If they need to prepare anything, let them know that as well. If you are presenting and you’re not sure if your material is correct, now is the time to get feedback and improve before the event day. Also send reminder to participants about the event. A lot of folks lead busy lives and communication is the key to getting a group to go together in one direction.
+<h3>
+1 Day before…
+</h3>
+<p><strong>7. Make any last minute decisions.</strong> This can include reminding attendees to bring power strips, their laptop/charger, refreshments, etc. Any special instructions for accessing the event space, or any lecture material to peruse beforehand.</p>
+<p>Refreshments: I suggest this the day before (or earlier) because some research may be involved in figuring out whether there are extra charges for delivery, or cutoff time for large orders. A friend shared with me an easy recipe for Sangria. Get a bottle of wine, a bottle of sprite, plastic cups, ice cubes, and let folks make their own mix. Will say that alcohol is only suggested if your event is for 21+ :) Making it potluck style would be fun too! Everyone can chip in like it’s a housewarming party. Makes it easier for everyone to break the ice with warm food in their bellies.</p>
+<strong>8. Guestlist.</strong> If the space you’re going to has security at the front door, you should send a guest list to speed up the check in process. I notice this is more of an issue in Manhattan than any other city.
+<h3>
+Day of…
+</h3>
+<p><strong>9. Showtime!</strong> There are a number of things to keep on top of:</p>
+<p>Since workshops attendees are often folks who want to learn something new, it could be a first exposure to a topic. You want to make it a welcoming environment for them by showing good hospitality. Greet everyone who comes in, smile! Help introduce folks to each other. To get a conversation going, you can ask them how they found out about your event or group, what they want to accomplish. These are pretty easy to answer open ended questions.</p>
+<p>Helping attendees with questions are a bit like the whack a mole game. You as the host of the event should circulate the room and keep a watch for anyone who looks like they are struggling or frustrated and help them ease that. An effective way to be able to keep your focus on scanning the room but also help the attendees is to find out if it’s a question with short answer or longer answer. If it’s short, I’ll help them there and if it’s longer then I’ll find a volunteer who’s free to help out.</p>
+Be aware that the projector may fail, the internet my not work, the restroom may run out of toilet paper, etc. Have backup options to all these to reduce the time spent on fixing technical difficulties.
+<h2>
+Extra tips
+</h2>
+<p>I like to take photographs of events to remind attendees the good times. It helps keep the momentum going in between events.</p>
+<blockquote class="twitter-tweet" lang="en"><p>
+<a href="https://twitter.com/NYCPyLadies"><span class="citation">@NYCPyLadies</span></a> workshop. Intro to Git/Github. It was wonderful to see everyone helping each other learn! <a href="https://twitter.com/search?q=%23pyladies&amp;src=hash">#pyladies</a> <a href="http://t.co/7Xt8kKpG4g">pic.twitter.com/7Xt8kKpG4g</a>
+</p>
+— Kat Chuang (<span class="citation">@katychuang</span>) <a href="https://twitter.com/katychuang/statuses/393593569597849601">October 25, 2013</a>
+</blockquote>
+<script async src="http://katychuang.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I decided to plan a series of 3 workshops all at once, with spacing of 2 weeks in between because the three are cornerstones of getting started: installation, source control, and knowing how to think in bits!
+<h2>
+Thanks for reading!
+</h2>
+<p>Please show your appreciation by planning your events and telling me how it went! You don’t have to be an expert at programming to plan an event that helps others. It is VERY VALUABLE to the community even if all you do is help them engage in new ways to foster discussions and new friendships.</p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Sat, 12 Oct 2013 18:06:57 UT</pubDate>
+    <guid>http://katychuang.com/2013/10/planning-workshops/</guid>
+</item>
+<item>
+    <title>Stories of Unintended Consequences</title>
+    <link>http://katychuang.com/2013/07/unintended-consequences/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Stories of Unintended Consequences</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on July 13, 2013 with labels: <a href="http://katychuang.com/label/beauty/">beauty</a></i>
+        </small></div>
+        <br>
+        <p>This morning while reading up on news, I see yet another vanity related story. Folks are getting plastic surgery to improve their looks, to improve their chances of marrying well. My first reaction, “<em>oh boy… if only folks thought a bit more about <a href="https://en.wikipedia.org/wiki/Unintended_consequences">unintended consequences</a>.</em>” Unintended consequences are outcomes from purposeful action that are not intended, could be positive or negative. Usually noticed and regretted when negative.</p>
+<p><a href="http://on.mash.to/1dmONNP">Plastic surgery for marriage related reasons</a>, seems like a great idea for getting a better deal but lying never helps you prosper. Your spouse could feel betrayed and sue you for false pretenses. <a href="http://bit.ly/U2hOEz">The judge could very well side with your spouse</a>. These days plastic surgery is becoming more common. In the last century, there were many stories of  technology design success and failures, documented in <strong><a href="http://www.amazon.com/gp/product/0679747567?ie=UTF8&amp;camp=213733&amp;creative=393185&amp;creativeASIN=0679747567&amp;linkCode=shr&amp;tag=hellodoctorki-20">Why Things Bite Back: Technology and Unintended Consequences</a></strong>.</p>
+<p>Back to the beauty part…. What is considered attractive?</p>
+I’m reminded of an old article, nearly 5 years ago. A graduate student “taught” a computer how to interpret attractiveness in women. (<a href="http://www.sciencedaily.com/releases/2008/04/080404122139.htm">Science Daily</a>) The same year, someone figured out <a href="http://www.nytimes.com/2008/10/09/fashion/09skin.html?_r=1&amp;oref=slogin">automatic photoshopping using mathematical formulas</a>.
+<blockquote>
+… like the many other attempts to use objective principles or even mathematical formulas to define beauty, this software program raises what psychologists, philosophers and feminists say are complex, even disturbing, questions about the perception of beauty and a beauty ideal.
+</blockquote>
+Can you really quantify feeling/perception? Culture must have an impact on our perceptions, especially when <a href="http://bit.ly/11EUIud">a significant portion of beauty contestants for a country look alike</a>. Beauty varies <a href="http://www.psychologytoday.com/blog/homo-consumericus/201004/beauty-culture-specific-or-universally-defined">by locality</a> and <a href="http://bit.ly/eMU5N">over time</a>, could a computer program adapt to suit the context? Is this software a variant of the thought process by plastic surgeons during consultation? Who would agree with the output of the program? While some folks like the <a href="https://en.wikipedia.org/wiki/The_Stepford_Wives">Stepford Wives try to look like one ideal</a> (<em>does this remind you of any particular valleys on the west coast?</em>), others <a href="http://blogs.villagevoice.com/runninscared/2010/08/weirdos_still_a.php">celebrate uniqueness</a> (<em>does this remind you of any major metropolitan cities on the east coast?</em>). <a href="http://jezebel.com/5886159/new-york-fashion-week-is-the-most-diverse-in-ages">Diversity is an important issue in the looks industry</a>. Why are there so many variations of beliefs and <a href="http://www.sirc.org/publik/mirror.html">why do we even care</a>? There are number advantages and disadvantages to supposed attractiveness when it comes to social capital.
+<blockquote>
+Attractive people have distinct advantages in our society. Studies show:
+<ul>
+    <li>
+Attractive children are more popular, both with classmates and teachers. Teachers give higher evaluations to the work of attractive children and have higher expectations of them (which has been shown to improve performance).
+</li>
+</ul>
+<ul>
+    <li>
+Attractive applicants have a better chance of getting jobs, and of receiving higher salaries. (one US study found that taller men earned around $600 per inch more than shorter executives.)
+</li>
+</ul>
+<ul>
+    <li>
+In court, attractive people are found guilty less often. When found guilty, they receive less severe sentences.
+</li>
+</ul>
+<ul>
+    <li>
+The ‘bias for beauty’ operates in almost all social situations – all experiments show we react more favourably to physically attractive people.
+</li>
+</ul>
+<ul>
+    <li>
+We also believe in the ‘what is beautiful is good’ stereotype – an irrational but deep-seated belief that physically attractive people possess other desirable characteristics such as intelligence, competence, social skills, confidence – even moral virtue. (The good fairy/princess is always beautiful; the wicked stepmother is always ugly)
+</li>
+</ul>
+</blockquote>
+Not a surprise that attractiveness is important to our western society. In fact, even throughout history standards of beauty have shifted, from corsets to feet binding.
+<blockquote>
+But although we resemble our ancestors and other cultures in our concern about appearance, there is a difference in degree of concern. Advances in technology and in particular the rise of the mass media has caused normal concerns about how we look to become obsessions.
+<ul>
+    <li>
+Thanks to the media, we have become accustomed to extremely rigid and uniform standards of beauty.
+</li>
+    <li>
+TV, billboards, magazines etc mean that we see ‘beautiful people’ all the time, more often than members of our own family, making exceptional good looks seem real, normal and attainable.
+</li>
+    <li>
+Standards of beauty have in fact become harder and harder to attain, particularly for women. The current media ideal of thinness for women is achievable by less than 5% of the female population.
+</li>
+    <li>
+Even very attractive people may not be looking in the mirror out of ‘vanity’, but out of insecurity. We forget that there are disadvantages to being attractive: attractive people are under much greater pressure to maintain their appearance. Also, studies show that attractive people don’t benefit from the ‘bias for beauty’ in terms of self-esteem. They often don’t trust praise of their work or talents, believing positive evaluations to be influenced by their appearance.
+</li>
+</ul>
+</blockquote>
+<h3>
+Different metrics of your genetics.
+</h3>
+<blockquote>
+Now, let’s get one thing straight so you can relax a bit. You wouldn’t be here unless your ancestors were beautiful. You need to accept the fact that we’re all beautiful; sexual selection guaranteed it, because your ancestors mated with the most beautiful partners. We all have beautiful elements in us; we’re going to talk about ways that we can expose and maximize them.
+</blockquote>
+From: Roizen, M. F., Oz, M., &amp; Spiker, T. (2008). You, being beautiful: The owner’s manual to inner and outer beauty. New York: Free Press. <a href="http://www.worldcat.org/oclc/209701214">http://www.worldcat.org/oclc/209701214</a>
+<div style="text-align:left;">
+<a href="http://thesocietypages.org/socimages/2013/03/18/1950s-beauty-pageant-judging-guidelines/">In the 1950’s, there were specific standards for selecting winners of a beauty contest</a>:
+</div>
+<blockquote>
+<div style="text-align:left;">
+First six show figure flaws, seventh is perfectly proportioned. (1) Shoulders too square. (2) Shoulders too sloping. (3) Hips too wide. (4) Shoulder bones too pronounced. (5) Shoulders and back hunched. (6) Legs irregular, with spaces at calves, knees, thighs. (7) The form divine, needs only a beautiful face.
+</div></blockquote>
+<div class="separator" style="clear:both;text-align:center;">
+<a href="http://katychuang.files.wordpress.com/2011/02/tumblr_lfytmlztru1qcla3bo1_500-scaled500.jpg?w=320&amp;h=237"><img alt src="http://katychuang.files.wordpress.com/2011/02/tumblr_lfytmlztru1qcla3bo1_500-scaled500.jpg?w=320&amp;h=237" width="320" height="237" border="0" /></a>
+</div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;">
+While those standards could be very strict, apparently in everyday situations among our peers our standards for beauty gravitates toward <strong>average</strong>.  <a href="http://www.sciencedaily.com/releases/2009/12/091216144141.htm">Scientists conduct experiments to measure the “Golden Ratio” of facial proportions</a>, which turns out to correspond with measures of an average face:
+</div>
+<blockquote>
+<div style="text-align:left;">
+
+<p>They discovered two “golden ratios,” one for length and one for width. Female faces were judged more attractive when the vertical distance between their eyes and the mouth was approximately 36 percent of the face’s length, and the horizontal distance between their eyes was approximately 46 percent of the face’s width.</p>
+</div></blockquote>
+<div class="separator" style="clear:both;text-align:center;">
+<a style="margin-left:1em;margin-right:1em;" href="http://katychuang.files.wordpress.com/2011/01/stringio-txt-scaled5001.jpg?w=300&amp;h=158"><img alt src="http://katychuang.files.wordpress.com/2011/01/stringio-txt-scaled5001.jpg?w=300&amp;h=158" border="0" /></a>
+</div>
+<div class="separator" style="clear:both;text-align:center;"></div>
+<div class="separator" style="clear:both;text-align:center;"></div>
+<div class="separator" style="clear:both;text-align:left;">
+This idea of what is identified as attractive by our brains has been studied for centuries. Our minds actually gravitate towards <strong>average</strong> looking faces because it’s easier to process:
+</div>
+<div class="separator" style="clear:both;text-align:center;">
+<a style="margin-left:1em;margin-right:1em;" href="http://katychuang.files.wordpress.com/2010/12/tumblr_ldlefeki3h1qcla3bo1_400-scaled500.jpg?w=368&amp;h=491"><img class="alignright" style="border:0;" alt src="http://katychuang.files.wordpress.com/2010/12/tumblr_ldlefeki3h1qcla3bo1_400-scaled500.jpg?w=368&amp;h=4911" width="100" height="134" border="0" /></a>
+</div>
+<blockquote>
+<p>In the late 1870s, scientist and eugenicist Sir Francis Galton developed an image of the prototypical “face of crime” by creating composite photos of men convicted of serious offenses.</p>
+<p>Though Galton failed to discover anything abnormal in his composite criminal faces, he did find that the resulting visages were shockingly handsome. (The middle face <a href="http://chnm.gmu.edu/courses/magic/police/galton2.gif" target="_blank">here</a> is the product of 14 criminals.) Studies have since established that people find prototypical faces—those with average features—to be attractive.</p>
+A paper published in the September issue of the journal <em>Psychological Science</em> proposes a new explanation for this phenomenon: Prototypical faces are pleasing because they’re easy for the brain to process.
+</blockquote>
+<b> </b> <b>Gender Differences: </b>Contrast is an important cue for perceiving the sex of a face, with greater contrast appearing feminine, and lesser contrast appearing masculine (via <a href="http://www.sciencedaily.com/releases/2009/10/091020153100.htm">Why Cosmetics Work: More Depth To Facial Differences Between Men And Women Than Presumed</a>)
+<div class="separator" style="clear:both;text-align:center;">
+<a style="margin-left:1em;margin-right:1em;" href="http://katychuang.files.wordpress.com/2011/01/stringio-txt-scaled5002.jpg?w=300&amp;h=153"><img alt src="http://katychuang.files.wordpress.com/2011/01/stringio-txt-scaled5002.jpg?w=300&amp;h=153" border="0" /></a>
+</div>
+<p>What matters more than your biometric looks, is your presentation, as it tells a lot more about who you are as a person and lifestyle choices (<a href="http://badspot.us/img/PonytailTheory.html">Ponytail Theory</a>) <a style="margin-left:auto;margin-right:auto;" href="http://katychuang.files.wordpress.com/2011/01/tumblr_lembz8rfgk1qcla3bo1_500-scaled500.gif?w=500&amp;h=419"><img class="aligncenter" alt src="http://katychuang.files.wordpress.com/2011/01/tumblr_lembz8rfgk1qcla3bo1_500-scaled500.gif?w=500&amp;h=419" width="320" height="268" border="0" /></a>Supposedly, these folks signing up for plastic surgery believe that attraction lies in the subconscious metrics. When it comes to partners, men often find women’s taste fickle and unfathomable. But ladies may not be entirely to blame. A <a href="http://www.economist.com/node/17672806">growing body of research suggests</a> that their preference for certain types of male physiognomy may be swayed by things beyond their conscious control—like prevalence of disease or crime—and in predictable ways. In any case, I recommend that before you commit to a life altering beauty decision, <strong>remember two facts</strong>: (1) looks do not hold a marriage together and (2) your perception of yourself tends to skew more negative than friends and family.</p>
+<p>http://vimeo.com/64598415</p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Sat, 13 Jul 2013 15:00:03 UT</pubDate>
+    <guid>http://katychuang.com/2013/07/unintended-consequences/</guid>
+</item>
+<item>
+    <title>How do you find a job at a tech startup?</title>
+    <link>http://katychuang.com/2013/07/startup-jobs/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">How do you find a job at a tech startup?</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on July  9, 2013 with labels: <a href="http://katychuang.com/label/tutorial/">tutorial</a></i>
+        </small></div>
+        <br>
+        You’ll need to know where all the startups are located in your city of choice. Check out these links.
+<ul>
+    <li>
+Startup Genome Project: <a href="http://www.startupgenome.com/">http://www.startupgenome.com/</a>
+</li>
+    <li>
+NYC: <a href="http://wearemadeinny.com/find-a-job/">http://wearemadeinny.com/find-a-job/</a>
+</li>
+    <li>
+LA: <a href="http://represent.la/">http://represent.la/</a>
+</li>
+    <li>
+Miami: <a href="http://mapyourstartup.co/">http://mapyourstartup.co/</a>
+</li>
+    <li>
+SF: <a href="http://map.innovatesf.com/">http://map.innovatesf.com/</a>
+</li>
+</ul>
+
+<div class="figure">
+<embed src="http://tctechcrunch2011.files.wordpress.com/2012/12/us-tech-map.jpg?w=640&amp;h=369" /><p class="caption">map</p>
+</div>
+    </div>
+</div>
+]]></description>
+    <pubDate>Tue, 09 Jul 2013 09:00:00 UT</pubDate>
+    <guid>http://katychuang.com/2013/07/startup-jobs/</guid>
+</item>
+<item>
+    <title>Hackathon on a Tropical Island</title>
+    <link>http://katychuang.com/2013/06/hackathon/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Hackathon on a Tropical Island</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on June  9, 2013 with labels: <a href="http://katychuang.com/label/editorial/">editorial</a>, <a href="http://katychuang.com/label/beauty/">beauty</a></i>
+        </small></div>
+        <br>
+        This post is going to be mostly photos. I stayed in San Juan for the weekend to get a sense of what life is like down there.
+<h1>
+Tech Summit PR
+</h1>
+<p>Imagine a beautiful island…</p>
+<div class="figure">
+<img src="https://lh4.googleusercontent.com/-2aHtK5JQR8E/UbEi6D5HKYI/AAAAAAAAI3o/zt2qKXhGSPk/w737-h285-no/13+-+1" alt="Puerto Rico Convention Center" /><p class="caption">Puerto Rico Convention Center</p>
+</div>
+<p style="text-align:center;">
+<p>… and a huge tech event! Awesome combination :)</p>
+<div class="figure">
+<img src="https://lh3.googleusercontent.com/-3XntJuAuN7g/UbHtCgpH_8I/AAAAAAAAI4Y/e6ijYn9Fgho/s592-no/13+-+2" alt="TechSummitPR" /><p class="caption">TechSummitPR</p>
+</div>
+<p>The Puerto Rico Convention Center was host to <a href="http://techsummitpr.com">TechSummitPR</a>, and alongside that event was the <a href="https://www.hackerleague.org/hackathons/puerto-rico-tech-summit-hackathon">hackathon</a>. You can see below beyond the guy standing in a suit are some folks sitting down. In fact, you can watch the<a href="http://vimeo.com/68416577"> trailer for the documentary </a>to see the great energy in the place. There were <a href="https://www.hackerleague.org/hackathons/puerto-rico-tech-summit-hackathon-code-for-puerto-rico/participations">over 200 hackers</a>, <a href="http://instagram.com/p/aQqp55QG6U/">most of them male</a>. I counted about 5 female hackers including yours truly. Most of the people I talked to were either PHP or Python developers.</p>
+Onto the fun stuff, my outfit! I wore a summery maxi dress with flip flops because it was so hot (mid to upper 80’s) and humid. My hair seems to like the heat and humidity (thank goodness!). Pinned back my bangs for distraction free coding. I, along with a colleague, <a href="http://www.github.com/katychuang/techsummitpr">made a python and javascript web application</a> that turns spreadsheet data from the government (education statistics) and produced an <a href="http://puertorico.herokuapp.com">interactive report interface</a>.
+<p style="text-align:left;">
+The t-shirt you see below is from the local company <a href="http://icommpr.com/">ICOMM</a>, who graciously hired me to help promote their brand in exchange for helping pay some of the airfare. Overall, I was quite impressed with the showing of company booths at the event. The entire floor was covered with booths. Each booth were quite lavish compared to academic and open source conferences. In fact, I was sitting on some classy ottomans for my photo and the green matched my dress! ^_^
+</p>
+<p style="text-align:center;">
+<img class="aligncenter" alt src="https://lh6.googleusercontent.com/-S7NKn8RaUeI/UbPs-qJSv5I/AAAAAAAAJEo/qf4LHyAghz8/s592-no/B56A94DC-0F05-4B6B-BE94-7FBB57D74AF2.JPG" width="592" height="592" />
+</p>
+I did my hair and makeup (minimally, since I was traveling but still took some time). My hair is permed, and dries naturally curly. Lifesaver when traveling and waking up super early for a hackathon! My hair has copper highlights to give the 3d effect (and thus more volume, since I lost a lot of hair to grad school stress). I kept a neutral makeup pallet mainly because this reduces the number of items to bring and also because it matches well with bold outfit colors without screaming “over the top”. My preference for eye makeup when it’s very humid is to use an eye primer and then eye cream pencils on top. It stays put and also eye cream pencils are fantastic for varied coverage. You can use a lighter coverage for daytime smokey and then stronger coverage at night for super sexy smokey eyes.
+<div style="width:600px;margin:0 auto;">
+<div style="position:relative;">
+<a href="http://www.polyvore.com/summer_makeup_for_hackathon/set?.embedder=1572909&amp;.svc=copypaste&amp;id=86258864" target="_blank"><img title="summer makeup for hackathon" alt="summer makeup for hackathon" src="http://cfc.polyvoreimg.com/cgi/img-set/.sig/xftICMTiKRP8Q52nHxzg/cid/86258864/id/vrS6liD8T5uTsuaRY5fZtA/size/c600x665.jpg" width="600" height="665" border="0" /></a>
+</div>
+</div>
+<div style="text-align:center;">
+<small><a href="http://www.polyvore.com/summer_makeup_for_hackathon/set?.embedder=1572909&amp;.svc=copypaste&amp;id=86258864" target="_blank">summer makeup for hackathon</a> by <a href="http://katsupnfries.polyvore.com/?.embedder=1572909&amp;.svc=copypaste" target="_blank">katsupnfries</a> featuring <a href="http://www.polyvore.com/trish_mcevoy/shop?brand=Trish+McEvoy" target="_blank">trish mcevoy</a></small>
+</div>
+<p style="text-align:center;">
+These items produce an effect like so:
+</p>
+<p style="text-align:center;">
+<img src="http://katychuang.files.wordpress.com/2013/06/hair.png" alt="hair" />
+</p>
+
+
+<div class="figure">
+<img src="http://farm6.staticflickr.com/5452/9059092032_17e1c376a4_b.jpg" alt="La Madre decor" /><p class="caption">La Madre decor</p>
+</div>
+<div class="figure">
+<img src="http://l4.yimg.com/sm/5466/9059090386_ec714f7cdc_b.jpg" alt="Old San Juan" /><p class="caption">Old San Juan</p>
+</div>
+<p style="text-align:left;">
+There are many great places with free wi-fi and outlets to hang out and <a href="https://plus.google.com/108870060325793264627/posts/VS8NY9HPyHQ">co-work</a> in San Juan. My preference is at the <a href="http://www.yelp.com/biz/pr-tea-co-san-juan">PR Tea Co</a>., however there are many adorable  in Old San Juan coffee shops such as <a href="http://www.yelp.com/biz/the-poets-passage-san-juan">The Poet’s Passage</a> and <a href="http://www.yelp.com/biz/caf%C3%A9-cuatro-sombras-san-juan-3">Café Cuatro Sombras</a>.
+</p>
+
+<p>And for food? Not even 5 minute walk and you can get a hearty meal at <a href="http://www.yelp.com/biz/cafe-manolin-old-san-juan-san-juan">Cafe Manolin</a>. If you want something fancier, you could eat at <a href="http://www.yelp.com/biz/verde-mesa-viejo-san-juan">Verde Mesa</a>, <a href="http://www.yelp.com/biz/waffle-era-san-juan">Waffle Era Tea Room</a>, or <a href="http://www.yelp.com/biz/la-madre-san-juan">La Madre</a>. There are also numerous bakeries and fro-yo places if you have a sweet tooth. Everywhere were examples of great design, including inside the bar La Taberna Lúpulo!</p>
+<p>It is a wonderfully charming place to spend your days. Be sure to bring mosquito repellent.</p>
+<div class="figure">
+<img src="http://l6.yimg.com/so/7416/9059091694_4509f87cc6.jpg" alt="PR Tea Co" /><p class="caption">PR Tea Co</p>
+</div>
+<div class="figure">
+<img src="https://lh6.googleusercontent.com/-J85CXc0_BfM/UbP0c9ymbPI/AAAAAAAAJSw/kqHPurfylnU/s698-no/796EC541-C365-424F-96EF-3487A0322ACD.JPG" alt="La Taberna Lúpulo" /><p class="caption">La Taberna Lúpulo</p>
+</div>
+<div class="figure">
+<img src="https://lh3.googleusercontent.com/-_cO7rrhdU80/UbP0c_H_TfI/AAAAAAAAJSw/2oC6zGUPgBo/s698-no/BCB25C39-0569-4B87-93AD-1FA4691B4F29.JPG" alt="Large Mural, Old San Juan" /><p class="caption">Large Mural, Old San Juan</p>
+</div>
+<div class="figure">
+<img src="https://lh3.googleusercontent.com/-Rk2gp3KbHxc/UbP0c4pZ_jI/AAAAAAAAJSw/ojNDnF11HMA/s698-no/C0A7AD2A-0EE3-4226-8A76-8C1288B0669D.JPG" alt="Plaza Colon, Old San Juan" /><p class="caption">Plaza Colon, Old San Juan</p>
+</div>
+    </div>
+</div>
+]]></description>
+    <pubDate>Sun, 09 Jun 2013 00:00:00 UT</pubDate>
+    <guid>http://katychuang.com/2013/06/hackathon/</guid>
+</item>
+<item>
+    <title>Dissertation Defense</title>
+    <link>http://katychuang.com/2013/05/dissertation-defense/</link>
+    <description><![CDATA[<div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Dissertation Defense</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on May 30, 2013 with labels: <a href="http://katychuang.com/label/editorial/">editorial</a></i>
+        </small></div>
+        <br>
+        <p>Preparation for my dissertation defense presentation in all honesty started since the beginning of entering the PhD program, where I collected buckets of ideas and quotes that would be relevant to the presentation. The real challenge was curating all that information and condensing it to a 45 minute presentation. It took weeks to decide whether to focus on the description of the research problem, methodology, the results, or implications. In the end my presentation touched upon all of these aspects of the dissertation study. The dissertation project is an opportunity for a PhD student to demonstrate to their committee that they have the skills to design a study, execute it, learn from mistakes, and think of how to get to the next study that would be even better; so it made sense to demonstrate experience for the whole scope. Also made references to mainstream cultural icons to help illustrate the concept of my work and listed peer-reviewed publications as that is indirectly a strong argument for why I should pass ;). I’m writing this entry up a few weeks after the defense date (May 30, 2013) simply because life got busy with graduation and visiting The Tech Summit in Puerto Rico and lending support to the PyLadies chapter there.</p>
+<p>Because the topic of the study was health social media, my committee included faculty from my department who have the background for methodology (content analysis and social network analysis of online communication), as well as external committee members with health backgrounds to advise on the application of findings. The primary focal point of my study was a quantitative observation of behavior in an online support community, with the secondary thrust describing how the design influenced the observed behavior. In less academic terms, my research was using a new quantitative method to analyze interaction design and user experience.</p>
+<p>Here are the dissertation slides:</p>
+ </iframe> <div style="margin-bottom:5px"> 
+<strong> <a href="https://www.slideshare.net/katychuang/dissertation-defense-22211211" title="Dissertation defense" target="_blank">Dissertation defense</a> </strong> from <strong><a href="http://www.slideshare.net/katychuang" target="_blank">Kat Chuang</a></strong>
+</div>
+
+<p>The night before I was so incredibly anxious, my friends kept saying encouraging things like, “You know the study the best” and “You’ll do great!”. This is very typical to experience. In the end, my committee loved the presentation, said it helped them understand what I was doing better than the book itself. That was a relief, since I had felt terrible about my public speaking performance earlier in the year. They also were smiling after the presentation, which is a great sign. Each committee member offered helpful advice for improving the flow of writing. Some even offered to proof read when I make it a published book!</p>
+Some friends were asking about my outfit for the presentation.
+<div style="width:600px;margin: 20px auto;">
+<div style="position:relative;">
+<a href="http://www.polyvore.com/dissertation_defense/set?.embedder=1572909&amp;.svc=copypaste&amp;id=86252443" target="_blank"><img title="dissertation defense" alt="dissertation defense" src="http://cfc.polyvoreimg.com/cgi/img-set/.sig/d45ay4tvUzpUu8zGeAQsOg/cid/86252443/id/8secqexdTu6oW9DhMMTRgg/size/c600x517.jpg" width="600" height="517" border="0" /></a>
+</div>
+</div>
+<div style="text-align:center;">
+<small><a href="http://www.polyvore.com/dissertation_defense/set?.embedder=1572909&amp;.svc=copypaste&amp;id=86252443" target="_blank">dissertation defense</a> by <a href="http://katsupnfries.polyvore.com/?.embedder=1572909&amp;.svc=copypaste" target="_blank">katsupnfries</a> featuring <a href="http://www.polyvore.com/leather_shoes/shop?query=leather+shoes" target="_blank">leather shoes</a></small>
+</div>
+ 
+<p style="text-align:center;">
+<img src="https://lh5.googleusercontent.com/-o04eDQBK1-c/UcInfp_H7jI/AAAAAAAAKbU/8IChKG4S3Hg/w280-h592-no/photo.jpg" alt="Outfit for dissertation defense" />
+</p>
+
+
+<p>I wore a black pencil skirt suit from Comptoir des Cotonniers with a marigold top and nude heels. My phone cover is a <a href="http://pinterest.com/pin/50454458297862230/">mini silicon chanel bag</a> with matching black and gold!</p>
+<p>Anyway, if you happen to have a thesis defense coming up and need tips I’d be happy to share about my experience.</p>
+    </div>
+</div>
+]]></description>
+    <pubDate>Thu, 30 May 2013 00:00:00 UT</pubDate>
+    <guid>http://katychuang.com/2013/05/dissertation-defense/</guid>
+</item>
+
+    </channel> 
+</rss>
