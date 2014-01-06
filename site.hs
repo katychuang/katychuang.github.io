@@ -1,4 +1,9 @@
---------------------------------------------------------------------------------
+-- Source file for katychuang.com
+-- Author: Katherine Chuang @katychuang
+
+
+
+-------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Control.Monad (forM_, zipWithM_, liftM)
 import           Data.Monoid (mappend, mconcat)
@@ -23,7 +28,7 @@ pandocWriteOptions = defaultHakyllWriterOptions
     { writerReferenceLinks = True
     }
 
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
 
@@ -37,10 +42,6 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "files/**" $ do
-        route   idRoute
-        compile copyFileCompiler
-
     match "css/**" $ do
         route   idRoute
         compile compressCssCompiler
@@ -48,12 +49,12 @@ main = hakyll $ do
     tags <- buildTags "posts/*" (fromCapture "label/*")
 
     -- Match all files under posts directory and its subdirectories.
-    -- Turn posts into wordpress style url: year/month/title/index.html
+    -- Turn posts into permalinked style url: year/month/title/index.html
     forM_ [("posts/*", "templates/post.html", "templates/postfooter.html"),
            ("pages/*", "templates/page.html", "templates/pagefooter.html"),
            ("products/*", "templates/page.html", "templates/pagefooter.html")] $ \(p, t, f) ->
         match p $ do
-            route $ wordpressRoute
+            route $ permalinkedRoute
             compile $ do
                 let allCtx =
                         field "recent" (\_ -> recentPostList) `mappend`
@@ -65,7 +66,7 @@ main = hakyll $ do
                     >>= saveSnapshot "content"
                     >>= loadAndApplyTemplate f (postCtx tags)
                     >>= loadAndApplyTemplate "templates/default.html" allCtx
-                    >>= wordpressifyUrls
+                    >>= permalinkedifyUrls
 
     -- Build special pages
     forM_ ["index.markdown", "404.markdown", "search.markdown"] $ \p ->
@@ -79,7 +80,7 @@ main = hakyll $ do
                 pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
                     >>= loadAndApplyTemplate "templates/page.html" (postCtx tags)
                     >>= loadAndApplyTemplate "templates/default.html" allCtx
-                    >>= wordpressifyUrls
+                    >>= permalinkedifyUrls
 
     -- Labels
     tagsRules tags $ \tag pattern -> do
@@ -97,7 +98,7 @@ main = hakyll $ do
                             constField "posts" list `mappend`
                             defaultContext)
                 >>= loadAndApplyTemplate "templates/default.html" allCtx
-                >>= wordpressifyUrls
+                >>= permalinkedifyUrls
 
     paginate 2 $ \index maxIndex itemsForPage -> do
         let id = fromFilePath $ "page/" ++ (show index) ++ "/index.html"
@@ -109,7 +110,7 @@ main = hakyll $ do
                         defaultContext
                     loadTeaser id = loadSnapshot id "teaser"
                                         >>= loadAndApplyTemplate "templates/teaser.html" (teaserCtx tags)
-                                        >>= wordpressifyUrls
+                                        >>= permalinkedifyUrls
                 item1 <- loadTeaser (head itemsForPage)
                 item2 <- loadTeaser (last itemsForPage)
                 let body1 = itemBody item1
@@ -123,7 +124,7 @@ main = hakyll $ do
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/blogpage.html" postsCtx
                     >>= loadAndApplyTemplate "templates/default.html" allCtx
-                    >>= wordpressifyUrls
+                    >>= permalinkedifyUrls
 
     -- Render RSS feed
     create ["rss.xml"] $ do
@@ -140,15 +141,15 @@ main = hakyll $ do
             posts <- recentFirst =<< loadAll "posts/*"
             let archiveCtx =
                     listField "posts" post1Ctx (return posts) `mappend`
-                    constField "title" "Articles"            `mappend`
+                    constField "title" "Articles"             `mappend`
                     defaultContext
             let allCtx =
-                    field "recent" (\_ -> recentPostList) `mappend`
+                    field "recent" (\_ -> recentPostList)     `mappend`
                     defaultContext
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" allCtx
-                >>= wordpressifyUrls
+                >>= permalinkedifyUrls
 
     create ["portfolio/index.html"] $ do
         route idRoute
@@ -156,7 +157,7 @@ main = hakyll $ do
             posts <- recentFirst =<< loadAll "products/*"
             let archiveCtx =
                     listField "posts" post1Ctx (return posts) `mappend`
-                    constField "title" "Recent Projects"            `mappend`
+                    constField "title" "Recent Projects"      `mappend`
                     defaultContext
             let allCtx =
                     field "recent" (\_ -> recentPostList) `mappend`
@@ -164,9 +165,9 @@ main = hakyll $ do
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" allCtx
-                >>= wordpressifyUrls
+                >>= permalinkedifyUrls
 
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 feedContext :: Context String
 feedContext = mconcat
     [ rssBodyField "description"
@@ -184,27 +185,27 @@ rssTitleField key = field key $ \i -> do
     let value' = liftM (replaceAll "&" (const "&amp;")) value
     maybe empty return value'
 
-toWordPressUrl :: FilePath -> String
-toWordPressUrl url =
+topermalinkedUrl :: FilePath -> String
+topermalinkedUrl url =
     replaceAll "/index.html" (const "/") (toUrl url)
 
 wpUrlField :: String -> Context a
 wpUrlField key = field key $
-    fmap (maybe "" toWordPressUrl) . getRoute . itemIdentifier
+    fmap (maybe "" topermalinkedUrl) . getRoute . itemIdentifier
 
 rssBodyField :: String -> Context String
 rssBodyField key = field key $
     return .
     (replaceAll "<iframe [^>]*>" (const "")) .
-    (withUrls wordpress) .
+    (withUrls permalinked) .
     (withUrls absolute) .
     itemBody
   where
-    wordpress x = replaceAll "/index.html" (const "/") x
+    permalinked x = replaceAll "/index.html" (const "/") x
     absolute x = if (head x) == '/' then (feedRoot feedConfiguration) ++ x else x
 
 
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 post1Ctx :: Context String
 post1Ctx =
@@ -224,14 +225,7 @@ teaserCtx tags =
     (postCtx tags)
 
 
---------------------------------------------------------------------------------
-
---allPostsList :: Compiler String
---allPostsList = do
---    posts   <- recentFirst =<< recentPosts
---    itemTpl <- loadBody "templates/indexpostitem.html"
---    list    <- applyTemplateList itemTpl defaultContext posts
---    return list
+-------------------------------------------------------------------------------
 
 postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
          -> Compiler String
@@ -248,16 +242,16 @@ recentPostList = do
     return list
 
 
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 recentPosts :: Compiler [Item String]
 recentPosts = do
     identifiers <- getMatches "posts/*"
     return [Item identifier "" | identifier <- identifiers]
 
 
---------------------------------------------------------------------------------
-wordpressRoute :: Routes
-wordpressRoute =
+-------------------------------------------------------------------------------
+permalinkedRoute :: Routes
+permalinkedRoute =
     gsubRoute "posts/" (const "") `composeRoutes`
         gsubRoute "pages/" (const "") `composeRoutes`
             gsubRoute "products/" (const "portfolio/") `composeRoutes`
@@ -267,22 +261,22 @@ wordpressRoute =
                                    then '/'
                                    else c
 
---------------------------------------------------------------------------------
--- | Compiler form of 'wordpressUrls' which automatically turns index.html
+-------------------------------------------------------------------------------
+-- | Compiler form of 'permalinkedUrls' which automatically turns index.html
 -- links into just the directory name
-wordpressifyUrls :: Item String -> Compiler (Item String)
-wordpressifyUrls item = do
+permalinkedifyUrls :: Item String -> Compiler (Item String)
+permalinkedifyUrls item = do
     route <- getRoute $ itemIdentifier item
     return $ case route of
         Nothing -> item
-        Just r  -> fmap wordpressifyUrlsWith item
+        Just r  -> fmap permalinkedifyUrlsWith item
 
 
 --------------------------------------------------------------------------------
--- | Wordpressify URLs in HTML
-wordpressifyUrlsWith :: String  -- ^ HTML to wordpressify
+-- | permalinkedify URLs in HTML
+permalinkedifyUrlsWith :: String  -- ^ HTML to permalinkedify
                      -> String  -- ^ Resulting HTML
-wordpressifyUrlsWith = withUrls convert
+permalinkedifyUrlsWith = withUrls convert
   where
     convert x = replaceAll "/index.html" (const "/") x
 
