@@ -1,0 +1,23 @@
+---
+date: 2013-12-28 18:06:57
+title: Intro to Behavior-Cultural Modeling & Prediction
+tags: tutorial, pydata
+---
+
+This evening while have a lovely conversation over dinner with a friend and fellow PyLady, we talked extensively about how one can choose datasets for building  data-heavy apps that provide social good.
+
+There are quite a few pages to check out in this research area.
+
+**Global Database of Events, Language, & Tone ([GDELT](http://gdelt.utdallas.edu/))**
+GDELT is the only global all-countries multi-decade georeferenced daily event dataset available for open research. You can download the entire quarter-billion-record dataset today, stretching back to January 1, 1979 and running to present.
+
+
+Social Computing, Behavioral-Cultural & Prediction (SBP) Conference is still accepting submissions for working on this dataset through Jan 12th. Winners will be invited to present their work at the SBP 2014 main conference in Washington DC, and their travel expenses reimbursed by SBP for up to US$1000. Information available at http://sbp-conference.org/challenge/
+
+Almost a year ago, Hilary Mason put together a [BitLy Bundle](http://bitly.com/bundles/hmason/1) of open data resources. It's still a good place to look for datasets.
+
+In 2014 we can see a lot more socially-relevant and commercially viable research studies taking place, from the availability of large datasets to commercial applications of this research, such as [Google's Hummingbird Algorithm](http://www.copyblogger.com/google-hummingbird/). Researchers figured out that when you have an ambiguous pronoun "it" in a query, the query before it can provide context. The linked article gives the example of looking for pictures of the TransAmerica Bulding and then wanting to know the height of the building.
+
+Marcia Bates was genius when she described human information seeking behavior as "[berry picking](http://pages.gseis.ucla.edu/faculty/bates/berrypicking.html)", where we might start with one question and serendipitously sidetrack to a related tangent. The value of social datasets lets you take a step in the direction of Google information retrieval researchers, in figuring out probabilities of search behavior patterns based on many datapoints and thusly provide better service for your customers. 
+
+All this research made possible with algorithms and coding. See data structures visualized [here](http://www.cs.usfca.edu/~galles/visualization/Algorithms.html).
