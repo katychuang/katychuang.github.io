@@ -1,5 +1,5 @@
 ---
-title: 
+title: Katherine Y. Chuang, PhD
 ---
 
 
