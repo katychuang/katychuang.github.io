@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Kat Y. Chuang, Ph.D.">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+        <title>Big Data in Fashion</title>
+        <link rel="stylesheet" type="text/css" href="/css/hemingway.css" />
+        <link rel="stylesheet" type="text/css" href="/css/white.css" />
+        <link rel="stylesheet" id="style-css" href="/css/social-icons.css" type="text/css" media="all">
+
+
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito%3A300&amp;ver=20121005" type="text/css" media="all">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-2990063-3'], ['_trackPageview']];
+            (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="inside">
+                <div id="search">
+                    <form method="get" id="sform" action="/search.html">
+                        <div class="searchimg"></div>
+                        <input type="text" id="q" value name="q" size="20" class="searchbox" />
+                    </form>
+                </div>
+
+                <h2><a href="/">Kat Chuang</a></h2>
+                <div class="links">
+                    <!--a href="mailto:person" class="toplink" target="_blank"><img src="/images/email.png" /></a-->
+                </div>
+                <div id="social">
+                    <a href="https://twitter.com/katychuang" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+                    <a href="https://plus.google.com/108870060325793264627" rel="tooltip" title="G+" class="googleplus">G+</a>
+                    <a href="https://github.com/katychuang" rel="tooltip" title="Github" class="github">Github</a>
+                    <a href="http://katychuang.wordpress.com" class="wordpress"></a>
+                    <a href="http://www.delicious.com/katsupnfries" rel="tooltip" title="Delicious" class="social-delicious">Delicious</a>
+                    <a href="http://www.youtube.com/katsupnfries" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+                    <a href="http://www.pinterest.com/katychuang" rel="tooltip" title="Pintrest" class="pintrest">Pinterest</a>
+                    <a href="https://www.linkedin.com/in/katychuang" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+                    <a href="http://context.katychuang.com" class="tumblr"></a>
+                    <a href="http://forrst.com/people/katychuang" class="forrst"></a>
+                    <a href="http://stackoverflow.com/users/1470114/katychuang" class="stackoverflow"></a>
+                    <a href="http://instagram.com/katsupnfries" class="instagram"></a>
+                    <a href="http://flickr.com/photos/katychuang" class="flickr"></a>
+                </div>
+                <div class="meetuplinks">
+                    <ul>
+                      <li>Find me at: </li>
+                      <li><a href="http://haskell-workshop.github.io">Haskell Workshop</a></li>
+                      <li><a href="http://nycpython.com">NYC PUG</a></li>
+                      <li><a href="http://meetup.com/nyc-pyladies">NYC PyLadies</a></li>
+                      <li><a href="http://meetup.com/nyc-open-data">NYC Open Data</a></li>
+                      <li><a href="http://pydata.org">PyData</a></li>
+                      <li><a href="http://sbp-conference.org">SBP Conference</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="primary">
+    <div class="inside">
+        <h1>Big Data in Fashion</h1>
+
+        <div class="figure">
+<img src="https://lh4.googleusercontent.com/-KMvgM7jn7_s/UTFgHKksKBI/AAAAAAAAGi0/YV6mOM8SPkI/w650-h426/Screen+Shot+2013-03-01+at+9.12.08+PM.png" alt="Screenshot" /><p class="caption">Screenshot</p>
+</div>
+<h1 id="fashion-forecasting">Fashion Forecasting</h1>
+<p><img src="http://katychuang.pythonanywhere.com/static/PythonFashionForecaster.png" style="max-width:200px;float:right;margin-left:20px"> This app is still in pre-alpha. This project was inspired by a book I read about the sociology of fashion. The author argues that fashion is a symbolic cultural product, dimensionally different from discussions on the articles of clothing. In the great words of Yuniya Kawamura, “fashion is not about clothes but is a belief”. In her book, she clarifies the difference between a “fashion system” and a “clothing system”, where fashion has intangible value yet propagated by cultural infrastructures promoting the activities of perceiving clothing as art.</p>
+<p>Reference: Kawamura, Yuniya. 2005. Fashion-ology. Oxford: Berg.</p>
+<h3 id="end-product">End Product</h3>
+<p>Current design ideas for FashionForecaster include these components but are not limited to:</p>
+<p>Social stream aggregator - python API packages to crawl social media data related to fashion (i.e. twitter, pinterest) Web framework to present data - i.e. django combined with jquery Data analysis - python libraries such as numpy, textmining. This would be the big data portion, and we plan to do this after data is collected.</p>
+<p><img src="https://lh5.googleusercontent.com/-_m9JKnsK5Vs/UTwqSkD24rI/AAAAAAAAGs0/BIeyNL1Q7Uw/w651-h511/Screen+Shot+2013-03-10+at+1.37.39+AM.png" style="float:right; max-width:500px"></p>
+<h2 id="technical-environment">Technical Environment:</h2>
+<ul>
+<li>Hosted on <a href="http://www.appspot.com">Google App Engine</a> Cloud Service</li>
+<li>Python (<a href="https://www.djangoproject.com/">Django</a>, <a href="https://pypi.python.org/pypi/simplejson/">SimpleJson</a>), and Flask.</li>
+<li>Javascript (D3.js, Flotr2.js, jQuery)</li>
+<li>API comes from Twitter</li>
+</ul>
+<p><strong>Demo of Flask app on Google App Engine:</strong> http://style-buzz.appspot.com</p>
+<p><strong>Demo of Django app on PythonAnywhere:</strong> http://katychuang.pythonanywhere.com</p>
+<p><strong>Code</strong> https://github.com/katychuang/Python-Fashion-Forecaster</p>
+<h3 id="talks">Talks</h3>
+<ol style="list-style-type: decimal">
+<li><p>NYC Python Meetup</p></li>
+<li><p>PyData 2013 Silicon Valley (<a href="https://github.com/katychuang/PyData2013-BigDataFashion">Slides</a>)</p></li>
+</ol>
+    </div>
+</div>
+
+<hr class="hide">
+
+<div id="secondary">
+    <div class="inside">
+    </div>
+</div>
+<hr class="hide">
+
+
+        <div id="ancillary">
+            <div class="inside">
+                <div class="block first">
+                    <div class="widget">
+                        <h2>Sections</h2>
+                        <div class="menu-pages-container">
+                            <ul id="menu-pages" class="menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/colophon/">Colophon</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/portfolio/">Portfolio</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/talks/">Talks</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/writings/">Writings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="textwidget">
+                            <small>Made with <a href="http://jaspervdj.be/hakyll/" class="links">Hakyll</a>. Hosted on <a href="http://github.com" class="links">Github</a>.</small><br />
+                            <small>© Katherine Y. Chuang, Ph.D.</small>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <br>
+                        <a href="/rss.xml" class="toplink" target="_blank"><img src="/images/rss.png"></a>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Recent Articles</h2>
+                        <ul>
+                            <li><a href="/2013/12/haskell/" title="Hakyll">Hakyll</a></li>
+<li><a href="/2013/12/recap/" title="Year of Code">Year of Code</a></li>
+<li><a href="/2013/12/sbp/" title="Intro to Behavior-Cultural Modeling &amp; Prediction">Intro to Behavior-Cultural Modeling &amp; Prediction</a></li>
+<li><a href="/2013/11/technical-writing/" title="Technical writing tip">Technical writing tip</a></li>
+<li><a href="/2013/11/django-apis/" title="Django + APIs  for online communities">Django + APIs  for online communities</a></li>
+<li><a href="/2013/10/planning-workshops/" title="Tips for planning a workshop">Tips for planning a workshop</a></li>
+<li><a href="/2013/07/unintended-consequences/" title="Stories of Unintended Consequences">Stories of Unintended Consequences</a></li>
+
+                        </ul>
+                        <div class="textwidget">
+                            <a href="/archive/" class="readmore">see all</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li class="cat-item"><a href="/label/beauty/" title="View all posts filed under beauty">Beauty</a></li>
+                            <li class="cat-item"><a href="/label/editorial/" title="View all posts filed under Editorial">Editorial</a></li>
+                            <li class="cat-item"><a href="/label/fashion/" title="View all posts filed under Fashion">Fashion</a></li>
+                            <li class="cat-item"><a href="/label/haskell/" title="View all posts filed under Haskell">Haskell</a></li>
+                            <li class="cat-item"><a href="/label/pydata/" title="View all posts filed under Life on PyData">PyData</a></li>
+                            <li class="cat-item"><a href="/label/tutorial/" title="View all posts filed under Tutorial">Tutorial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <hr class="hide">
+        <br class="clear">
+    </body>
+    <script type="text/plain" src="/css/prettyPrint.js"></script>
+</html>
