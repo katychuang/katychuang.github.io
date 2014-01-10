@@ -1,0 +1,49 @@
+---
+date: 2013-06-09 00:00:00
+title: Hackathon on a Tropical Island
+tags: editorial, beauty
+---
+This post is going to be mostly photos. I stayed in San Juan for the weekend to get a sense of what life is like down there.
+<h1>Tech Summit PR</h1>
+Imagine a beautiful island...
+
+![Puerto Rico Convention Center](https://lh4.googleusercontent.com/-2aHtK5JQR8E/UbEi6D5HKYI/AAAAAAAAI3o/zt2qKXhGSPk/w737-h285-no/13+-+1)
+
+<p style="text-align:center;">... and a huge tech event! Awesome combination :)
+
+![TechSummitPR](https://lh3.googleusercontent.com/-3XntJuAuN7g/UbHtCgpH_8I/AAAAAAAAI4Y/e6ijYn9Fgho/s592-no/13+-+2)
+
+The Puerto Rico Convention Center was host to <a href="http://techsummitpr.com">TechSummitPR</a>, and alongside that event was the <a href="https://www.hackerleague.org/hackathons/puerto-rico-tech-summit-hackathon">hackathon</a>. You can see below beyond the guy standing in a suit are some folks sitting down. In fact, you can watch the<a href="http://vimeo.com/68416577"> trailer for the documentary </a>to see the great energy in the place. There were <a href="https://www.hackerleague.org/hackathons/puerto-rico-tech-summit-hackathon-code-for-puerto-rico/participations">over 200 hackers</a>, <a href="http://instagram.com/p/aQqp55QG6U/">most of them male</a>. I counted about 5 female hackers including yours truly. Most of the people I talked to were either PHP or Python developers.
+
+Onto the fun stuff, my outfit! I wore a summery maxi dress with flip flops because it was so hot (mid to upper 80's) and humid. My hair seems to like the heat and humidity (thank goodness!). Pinned back my bangs for distraction free coding. I, along with a colleague, <a href="http://www.github.com/katychuang/techsummitpr">made a python and javascript web application</a> that turns spreadsheet data from the government (education statistics) and produced an <a href="http://puertorico.herokuapp.com">interactive report interface</a>.
+<p style="text-align:left;">The t-shirt you see below is from the local company <a href="http://icommpr.com/">ICOMM</a>, who graciously hired me to help promote their brand in exchange for helping pay some of the airfare.
+Overall, I was quite impressed with the showing of company booths at the event. The entire floor was covered with booths. Each booth were quite lavish compared to academic and open source conferences. In fact, I was sitting on some classy ottomans for my photo and the green matched my dress! ^_^</p>
+<p style="text-align:center;"><img class="aligncenter" alt="" src="https://lh6.googleusercontent.com/-S7NKn8RaUeI/UbPs-qJSv5I/AAAAAAAAJEo/qf4LHyAghz8/s592-no/B56A94DC-0F05-4B6B-BE94-7FBB57D74AF2.JPG" width="592" height="592" /></p>
+I did my hair and makeup (minimally, since I was traveling but still took some time). My hair is permed, and dries naturally curly. Lifesaver when traveling and waking up super early for a hackathon! My hair has copper highlights to give the 3d effect (and thus more volume, since I lost a lot of hair to grad school stress). I kept a neutral makeup pallet mainly because this reduces the number of items to bring and also because it matches well with bold outfit colors without screaming "over the top". My preference for eye makeup when it's very humid is to use an eye primer and then eye cream pencils on top. It stays put and also eye cream pencils are fantastic for varied coverage. You can use a lighter coverage for daytime smokey and then stronger coverage at night for super sexy smokey eyes.
+<div style="width:600px;margin:0 auto;">
+<div style="position:relative;"><a href="http://www.polyvore.com/summer_makeup_for_hackathon/set?.embedder=1572909&amp;.svc=copypaste&amp;id=86258864" target="_blank"><img title="summer makeup for hackathon" alt="summer makeup for hackathon" src="http://cfc.polyvoreimg.com/cgi/img-set/.sig/xftICMTiKRP8Q52nHxzg/cid/86258864/id/vrS6liD8T5uTsuaRY5fZtA/size/c600x665.jpg" width="600" height="665" border="0" /></a></div>
+</div>
+<div style="text-align:center;"><small><a href="http://www.polyvore.com/summer_makeup_for_hackathon/set?.embedder=1572909&amp;.svc=copypaste&amp;id=86258864" target="_blank">summer makeup for hackathon</a> by <a href="http://katsupnfries.polyvore.com/?.embedder=1572909&amp;.svc=copypaste" target="_blank">katsupnfries</a> featuring <a href="http://www.polyvore.com/trish_mcevoy/shop?brand=Trish+McEvoy" target="_blank">trish mcevoy</a></small></div>
+<p style="text-align:center;">These items produce an effect like so:</p>
+<p style="text-align:center;">
+![hair](http://katychuang.files.wordpress.com/2013/06/hair.png)
+</p>
+
+
+![La Madre decor](http://farm6.staticflickr.com/5452/9059092032_17e1c376a4_b.jpg)
+
+![Old San Juan](http://l4.yimg.com/sm/5466/9059090386_ec714f7cdc_b.jpg)
+
+<p style="text-align:left;">There are many great places with free wi-fi and outlets to hang out and <a href="https://plus.google.com/108870060325793264627/posts/VS8NY9HPyHQ">co-work</a> in San Juan. My preference is at the <a href="http://www.yelp.com/biz/pr-tea-co-san-juan">PR Tea Co</a>., however there are many adorable  in Old San Juan coffee shops such as <a href="http://www.yelp.com/biz/the-poets-passage-san-juan">The Poet's Passage</a> and <a href="http://www.yelp.com/biz/caf%C3%A9-cuatro-sombras-san-juan-3">Café Cuatro Sombras</a>.</p>
+
+And for food? Not even 5 minute walk and you can get a hearty meal at <a href="http://www.yelp.com/biz/cafe-manolin-old-san-juan-san-juan">Cafe Manolin</a>. If you want something fancier, you could eat at <a href="http://www.yelp.com/biz/verde-mesa-viejo-san-juan">Verde Mesa</a>, <a href="http://www.yelp.com/biz/waffle-era-san-juan">Waffle Era Tea Room</a>, or <a href="http://www.yelp.com/biz/la-madre-san-juan">La Madre</a>. There are also numerous bakeries and fro-yo places if you have a sweet tooth. Everywhere were examples of great design, including inside the bar La Taberna Lúpulo!
+
+It is a wonderfully charming place to spend your days. Be sure to bring mosquito repellent.
+
+![PR Tea Co](http://l6.yimg.com/so/7416/9059091694_4509f87cc6.jpg)
+
+![La Taberna Lúpulo](https://lh6.googleusercontent.com/-J85CXc0_BfM/UbP0c9ymbPI/AAAAAAAAJSw/kqHPurfylnU/s698-no/796EC541-C365-424F-96EF-3487A0322ACD.JPG)
+
+![Large Mural, Old San Juan](https://lh3.googleusercontent.com/-_cO7rrhdU80/UbP0c_H_TfI/AAAAAAAAJSw/2oC6zGUPgBo/s698-no/BCB25C39-0569-4B87-93AD-1FA4691B4F29.JPG)
+
+![Plaza Colon, Old San Juan](https://lh3.googleusercontent.com/-Rk2gp3KbHxc/UbP0c4pZ_jI/AAAAAAAAJSw/ojNDnF11HMA/s698-no/C0A7AD2A-0EE3-4226-8A76-8C1288B0669D.JPG)

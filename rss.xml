@@ -10,7 +10,8 @@
         <item>
     <title>Hakyll</title>
     <link>http://katychuang.com/2013/12/haskell/</link>
-    <description><![CDATA[<div id="primary">
+    <description>
+        <div id="primary">
     <div class="inside">
         <h1 style="margin-bottom:10px">Hakyll</h1>
         <div style="opacity:0.8;"><small>
@@ -525,7 +526,7 @@ There are many great places with free wi-fi and outlets to hang out and <a href=
         <p>Preparation for my dissertation defense presentation in all honesty started since the beginning of entering the PhD program, where I collected buckets of ideas and quotes that would be relevant to the presentation. The real challenge was curating all that information and condensing it to a 45 minute presentation. It took weeks to decide whether to focus on the description of the research problem, methodology, the results, or implications. In the end my presentation touched upon all of these aspects of the dissertation study. The dissertation project is an opportunity for a PhD student to demonstrate to their committee that they have the skills to design a study, execute it, learn from mistakes, and think of how to get to the next study that would be even better; so it made sense to demonstrate experience for the whole scope. Also made references to mainstream cultural icons to help illustrate the concept of my work and listed peer-reviewed publications as that is indirectly a strong argument for why I should pass ;). I’m writing this entry up a few weeks after the defense date (May 30, 2013) simply because life got busy with graduation and visiting The Tech Summit in Puerto Rico and lending support to the PyLadies chapter there.</p>
 <p>Because the topic of the study was health social media, my committee included faculty from my department who have the background for methodology (content analysis and social network analysis of online communication), as well as external committee members with health backgrounds to advise on the application of findings. The primary focal point of my study was a quantitative observation of behavior in an online support community, with the secondary thrust describing how the design influenced the observed behavior. In less academic terms, my research was using a new quantitative method to analyze interaction design and user experience.</p>
 <p>Here are the dissertation slides:</p>
- </iframe> <div style="margin-bottom:5px"> 
+ </iframe> <div style="margin-bottom:5px">
 <strong> <a href="https://www.slideshare.net/katychuang/dissertation-defense-22211211" title="Dissertation defense" target="_blank">Dissertation defense</a> </strong> from <strong><a href="http://www.slideshare.net/katychuang" target="_blank">Kat Chuang</a></strong>
 </div>
 
@@ -554,5 +555,5 @@ Some friends were asking about my outfit for the presentation.
     <guid>http://katychuang.com/2013/05/dissertation-defense/</guid>
 </item>
 
-    </channel> 
+    </channel>
 </rss>
