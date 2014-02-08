@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Kat Y. Chuang, Ph.D.">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+        <title>Connecting django to a legacy database</title>
+        <link rel="stylesheet" type="text/css" href="/css/hemingway.css" />
+        <link rel="stylesheet" type="text/css" href="/css/white.css" />
+        <link rel="stylesheet" id="style-css" href="/css/social-icons.css" type="text/css" media="all">
+
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito%3A300&amp;ver=20121005" type="text/css" media="all">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-2990063-3'], ['_trackPageview']];
+            (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="inside">
+                <div id="search">
+                    <form method="get" id="sform" action="/search.html">
+                        <input type="text" id="q" value name="q" size="20" class="searchbox" />
+                        <div class="searchimg"></div>
+                    </form>
+                </div>
+
+                <h2><a href="/">Kat Chuang</a></h2>
+                <div class="links">
+                    <!--a href="mailto:person" class="toplink" target="_blank"><img src="/images/email.png" /></a-->
+                </div>
+                <div id="social">
+                    <a href="https://twitter.com/katychuang" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+                    <a href="https://plus.google.com/108870060325793264627" rel="tooltip" title="G+" class="googleplus">G+</a>
+                    <a href="https://github.com/katychuang" rel="tooltip" title="Github" class="github">Github</a>
+                    <a href="http://katychuang.wordpress.com" class="wordpress"></a>
+                    <a href="http://www.delicious.com/katsupnfries" rel="tooltip" title="Delicious" class="delicious">Delicious</a>
+                    <a href="http://www.youtube.com/katsupnfries" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+                    <a href="http://www.pinterest.com/katychuang" rel="tooltip" title="Pintrest" class="pintrest">Pinterest</a>
+                    <a href="https://www.linkedin.com/in/katychuang" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+                    <a href="http://context.katychuang.com" class="tumblr"></a>
+                    <a href="http://forrst.com/people/katychuang" class="forrst"></a>
+                    <a href="http://stackoverflow.com/users/1470114/katychuang" class="stackoverflow"></a>
+                    <a href="http://instagram.com/katsupnfries" class="instagram"></a>
+                    <a href="http://flickr.com/photos/katychuang" class="flickr"></a>
+                </div>
+                <div class="meetuplinks">
+                    <ul>
+                      <li>Find me at: </li>
+                      <li><a href="http://haskell-workshop.github.io">Haskell Workshop</a></li>
+                      <li><a href="http://nycpython.com">NYC PUG</a></li>
+                      <li><a href="http://meetup.com/nyc-pyladies">NYC PyLadies</a></li>
+                      <li><a href="http://meetup.com/nyc-open-data">NYC Open Data</a></li>
+                      <li><a href="http://pydata.org">PyData</a></li>
+                      <li><a href="http://sbp-conference.org">SBP Conference</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Connecting django to a legacy database</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on November 19, 2012 with labels: <a href="/label/tutorial/">tutorial</a>, <a href="/label/pydata/">pydata</a></i>
+        </small></div>
+        <br>
+        <p>At work we use Microsoft’s SQL Server to store data. It’s clunky and inefficient to move data in and out, which has worked in the past because the data needs to be secure. What’s more secure than a black hole? ::smirk:: Well, I want to create an analytics dashboard and pull some data to get quick statistics for creating compliance reports*. I’d like to ideally create something and iOS native app someday but for now I’ll go with a mobile web version**.</p>
+<p>I tried ALL DAY to get a microsoft solution to work… tried WCF web services, tried ASP.Net MVC application on Windows 7 with Visual Studio 2010 with no luck for either. Felt like a waste of a day, until I gave python a try tonight. Guess third time’s the charm. I used this guide by Tivix during installation. Please note that they used Django 1.3 at the time of writing the guide.</p>
+<h1 id="steps">Steps:</h1>
+<p>Install MacPorts (<a href="http://www.macports.org/">http://www.macports.org/</a>) to quickly install two dependencies: freetds and libiodbc. After you have those, use pip to install the django-pyodbc extension. The link below is for Django 1.4. Verify that you have Django version 1.4, otherwise, use the link provided in the guide above for django-pyodbc:</p>
+<pre><code data-lang="bash">$ python -c &quot;import django; print(django.get_version())&quot;</code></pre>
+<p>In the shell, type the following commands to install the packages. You may have to prefix them with ‘sudo’ depending on how your mac is set up.</p>
+<pre><code data-lang="bash">$ sudo port install freetds
+$ sudo port install libiodbc
+$ pip install pyodbc
+$ pip install pip install https://github.com/avidal/django-pyodbc/archive/django-1.4.zip
+</code></pre>
+
+<p>Download ODBC Manager (<a href="http://www.odbcmanager.net/">http://www.odbcmanager.net/</a>) and add the database driver.</p>
+<p>ODBC Manager -&gt; Drivers -&gt; Add… and enter this data (change path if needed):</p>
+<pre><code data-lang="text">Driver Name: FreeTDS
+Driver file:/opt/local/var/macports/software/freetds/0.82_0/opt/local/lib/libtdsodbc.so </code></pre>
+
+<p>(you may have to use spotlight to search for the correct file location! add simlinks to those places)</p>
+<pre><code data-lang="bash">$ sudo ln -s /Library/ODBC/odbc.ini /opt/local/etc/odbc.ini
+$ sudo ln -s /Library/ODBC/odbcinst.ini /opt/local/etc/odbcinst.ini
+</code></pre>
+<p>In the settings.py file, add the database information:</p>
+<pre><code data-lang="python">DATABASES = {
+	'default': {
+		'ENGINE': 'sql_server.pyodbc',
+		'NAME': 'DB NAME',
+		'HOST': 'HOST IP',
+		'USER': 'USER',
+		'PASSWORD': 'PSW',
+		'PORT': 1433,
+		'OPTIONS': {
+			'driver': 'FreeTDS',
+			'host_is_server': True,
+			'extra_params': &quot;TDS_VERSION=8.0&quot;
+		}
+	}
+}</code></pre>
+
+<p>Run this command to grab the database schema from your legacy database.</p>
+<pre><code data-lang="bash">$ python manage.py inspectdb &gt; models.py</code></pre>
+
+<hr>
+
+<p><small>Footnotes: * Compliance reports are used in healthcare research to show that a long-term study is complying with regulations. Most of these studies are ginormous with hefty funding from the government that require lots of documentation showing periodic research activity.</p>
+<p>** Mobile web is essentially a web application that can be displayed in a browser, but with responsive grid design to allow for comfortable viewing on any screen size spanning from smart phones to desktops. </small></p>
+    </div>
+</div>
+
+<hr class="hide">
+
+<div id="secondary">
+    <div class="inside">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'katychuang'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+<hr class="hide">
+
+
+        <div id="ancillary">
+            <div class="inside">
+                <div class="block first">
+                    <div class="widget">
+                        <h2>Sections</h2>
+                        <div class="menu-pages-container">
+                            <ul id="menu-pages" class="menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/colophon/">Colophon</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/portfolio/">Portfolio</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/talks/">Talks</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/writings/">Writings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="textwidget">
+                            <small>Made with <a href="http://jaspervdj.be/hakyll/" class="links">Hakyll</a>. Hosted on <a href="http://github.com" class="links">Github</a>.</small><br />
+                            <small>© Katherine Y. Chuang, Ph.D.</small>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <br>
+                        <a href="/rss.xml" class="toplink" target="_blank"><img src="/images/rss.png"></a>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Recent Articles</h2>
+                        <ul>
+                            <li><a href="/2014/01/web-dev-tools/" title="Essential Tools for Web Development">Essential Tools for Web Development</a></li>
+<li><a href="/2013/12/haskell/" title="Hakyll">Hakyll</a></li>
+<li><a href="/2013/12/recap/" title="Year of Code">Year of Code</a></li>
+<li><a href="/2013/12/sbp/" title="Intro to Behavior-Cultural Modeling &amp; Prediction">Intro to Behavior-Cultural Modeling &amp; Prediction</a></li>
+<li><a href="/2013/11/technical-writing/" title="Technical writing tip">Technical writing tip</a></li>
+<li><a href="/2013/11/django-apis/" title="Django + APIs  for online communities">Django + APIs  for online communities</a></li>
+<li><a href="/2013/10/planning-workshops/" title="Tips for planning a workshop">Tips for planning a workshop</a></li>
+
+                        </ul>
+                        <div class="textwidget">
+                            <a href="/archive/" class="readmore">see all</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li class="cat-item"><a href="/label/beauty/" title="View all posts filed under beauty">Beauty</a></li>
+                            <li class="cat-item"><a href="/label/editorial/" title="View all posts filed under Editorial">Editorial</a></li>
+                            <li class="cat-item"><a href="/label/fashion/" title="View all posts filed under Fashion">Fashion</a></li>
+                            <li class="cat-item"><a href="/label/haskell/" title="View all posts filed under Haskell">Haskell</a></li>
+                            <li class="cat-item"><a href="/label/pydata/" title="View all posts filed under Life on PyData">PyData</a></li>
+                            <li class="cat-item"><a href="/label/tutorial/" title="View all posts filed under Tutorial">Tutorial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <hr class="hide">
+        <br class="clear">
+    </body>
+    <script type="text/plain" src="/css/prettyPrint.js"></script>
+</html>

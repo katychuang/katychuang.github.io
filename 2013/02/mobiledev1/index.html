@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Kat Y. Chuang, Ph.D.">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+        <title>Constraints in Mobile Development, pt 1</title>
+        <link rel="stylesheet" type="text/css" href="/css/hemingway.css" />
+        <link rel="stylesheet" type="text/css" href="/css/white.css" />
+        <link rel="stylesheet" id="style-css" href="/css/social-icons.css" type="text/css" media="all">
+
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito%3A300&amp;ver=20121005" type="text/css" media="all">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-2990063-3'], ['_trackPageview']];
+            (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="inside">
+                <div id="search">
+                    <form method="get" id="sform" action="/search.html">
+                        <input type="text" id="q" value name="q" size="20" class="searchbox" />
+                        <div class="searchimg"></div>
+                    </form>
+                </div>
+
+                <h2><a href="/">Kat Chuang</a></h2>
+                <div class="links">
+                    <!--a href="mailto:person" class="toplink" target="_blank"><img src="/images/email.png" /></a-->
+                </div>
+                <div id="social">
+                    <a href="https://twitter.com/katychuang" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+                    <a href="https://plus.google.com/108870060325793264627" rel="tooltip" title="G+" class="googleplus">G+</a>
+                    <a href="https://github.com/katychuang" rel="tooltip" title="Github" class="github">Github</a>
+                    <a href="http://katychuang.wordpress.com" class="wordpress"></a>
+                    <a href="http://www.delicious.com/katsupnfries" rel="tooltip" title="Delicious" class="delicious">Delicious</a>
+                    <a href="http://www.youtube.com/katsupnfries" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+                    <a href="http://www.pinterest.com/katychuang" rel="tooltip" title="Pintrest" class="pintrest">Pinterest</a>
+                    <a href="https://www.linkedin.com/in/katychuang" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+                    <a href="http://context.katychuang.com" class="tumblr"></a>
+                    <a href="http://forrst.com/people/katychuang" class="forrst"></a>
+                    <a href="http://stackoverflow.com/users/1470114/katychuang" class="stackoverflow"></a>
+                    <a href="http://instagram.com/katsupnfries" class="instagram"></a>
+                    <a href="http://flickr.com/photos/katychuang" class="flickr"></a>
+                </div>
+                <div class="meetuplinks">
+                    <ul>
+                      <li>Find me at: </li>
+                      <li><a href="http://haskell-workshop.github.io">Haskell Workshop</a></li>
+                      <li><a href="http://nycpython.com">NYC PUG</a></li>
+                      <li><a href="http://meetup.com/nyc-pyladies">NYC PyLadies</a></li>
+                      <li><a href="http://meetup.com/nyc-open-data">NYC Open Data</a></li>
+                      <li><a href="http://pydata.org">PyData</a></li>
+                      <li><a href="http://sbp-conference.org">SBP Conference</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Constraints in Mobile Development, pt 1</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on February  6, 2013 with labels: <a href="/label/tutorial/">tutorial</a></i>
+        </small></div>
+        <br>
+        <p>There are different IDE’s for developing web apps, I’ve been thinking about how the environment and documentation affects development. I’ve worked with a number of tools over the years for various languages and aspects of web development*. Some tools are better suited for backend tasks and others for front end. Regardless, there are some common patterns in software development workflow.</p>
+<p>Some context for non-developers here.. IDEs are integrated development editors, software that helps you write code. It could be very simple (just a text editor) or have all the bells and whistles (drag and drop, design view and code view, etc). Some come with the OS (vim) and others require purchasing an expensive license to install (m$). For the sake of this blog essay, I’m more interested in comparing android and ios mobile development, and at a macro level, since I want to focus more on the development process. See figure 1 &amp; 2 for screenshots.</p>
+<h2>
+IDE INTERFACES OVERVIEW
+</h2>
+
+<p><a href="http://developer.android.com/tools/help/adt.html">Android Development Toolkit (ADT)</a> <br /> They have free tools for developers, the popular one is Eclipse with ADT plugin. Big download, tricky to set up the first time on mac. &gt; ADT extends the capabilities of Eclipse to let you quickly set up new Android projects, create an application UI, add packages based on the Android Framework API, debug your applications using the Android SDK tools, and even export signed (or unsigned) .apk files in order to distribute your application.</p>
+<p><img src="http://blahti.files.wordpress.com/2011/06/screen-shot-2011-06-30-at-7-21-25-am.png?w=500"> Figure 1. Eclipse with ADT</p>
+<p><a href="https://developer.apple.com/technologies/tools/">Xcode</a></p>
+<p>Apple will let you download XCode with the iPad/iPhone simulator for free if you sign up for a developer key. Once you have that installed, you open it up and can start creating projects and coding. No additional configurations needed to start coding.</p>
+<p><img src="http://climbingupblog.files.wordpress.com/2011/03/workspacewindow.png?w=500"> Figure 2. Xcode</p>
+<p><img src="http://www.idev101.com/code/Xcode/Xcode4/Xcode4_overview.png"> Figure 3. Areas in Xcode</p>
+<p>More : http://www.idev101.com/code/Xcode/Xcode4/quick_look.html</p>
+<h3>
+COMMON TASKS
+</h3>
+
+<h4>
+Outline views
+</h4>
+
+<div style="float:right">
+
+Xcode <img src="https://devimages.apple.com.edgekey.net/technologies/tools/images/new_navigators20100721.jpg">
+</div>
+
+<p>ADT <img src="http://developer.android.com/images/layout_outline.png"></p>
+<h4>
+Code views
+</h4>
+
+<p>Elements Palette</p>
+<p>ADT <img src="http://developer.android.com/images/palette.png"></p>
+<h4>
+UI Previews
+</h4>
+
+<p>ADT <img src="http://developer.android.com/images/canvas.png"></p>
+<p>Xcode <img src="https://devimages.apple.com.edgekey.net/technologies/tools/images/overlay_closer_interface20110718.jpg"></p>
+<p>Part 2 (documentation) to follow.</p>
+<div class="footnote">
+<pre><code>In chronological order since 2 years ago, I’ve worked with the following for web development: TextWrangler, vim, Dreamweaver, Eclipse (mac &amp; windows), Visual Studio 2010, SublimeText2, Eclipse with PyDev (python), Eclipse with ADT (android), XCode, Visual Studio 2012. Those who are familiar with the names will know some are OS dependent.</code></pre>
+</div>
+    </div>
+</div>
+
+<hr class="hide">
+
+<div id="secondary">
+    <div class="inside">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'katychuang'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+<hr class="hide">
+
+
+        <div id="ancillary">
+            <div class="inside">
+                <div class="block first">
+                    <div class="widget">
+                        <h2>Sections</h2>
+                        <div class="menu-pages-container">
+                            <ul id="menu-pages" class="menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/colophon/">Colophon</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/portfolio/">Portfolio</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/talks/">Talks</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/writings/">Writings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="textwidget">
+                            <small>Made with <a href="http://jaspervdj.be/hakyll/" class="links">Hakyll</a>. Hosted on <a href="http://github.com" class="links">Github</a>.</small><br />
+                            <small>© Katherine Y. Chuang, Ph.D.</small>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <br>
+                        <a href="/rss.xml" class="toplink" target="_blank"><img src="/images/rss.png"></a>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Recent Articles</h2>
+                        <ul>
+                            <li><a href="/2014/01/web-dev-tools/" title="Essential Tools for Web Development">Essential Tools for Web Development</a></li>
+<li><a href="/2013/12/haskell/" title="Hakyll">Hakyll</a></li>
+<li><a href="/2013/12/recap/" title="Year of Code">Year of Code</a></li>
+<li><a href="/2013/12/sbp/" title="Intro to Behavior-Cultural Modeling &amp; Prediction">Intro to Behavior-Cultural Modeling &amp; Prediction</a></li>
+<li><a href="/2013/11/technical-writing/" title="Technical writing tip">Technical writing tip</a></li>
+<li><a href="/2013/11/django-apis/" title="Django + APIs  for online communities">Django + APIs  for online communities</a></li>
+<li><a href="/2013/10/planning-workshops/" title="Tips for planning a workshop">Tips for planning a workshop</a></li>
+
+                        </ul>
+                        <div class="textwidget">
+                            <a href="/archive/" class="readmore">see all</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li class="cat-item"><a href="/label/beauty/" title="View all posts filed under beauty">Beauty</a></li>
+                            <li class="cat-item"><a href="/label/editorial/" title="View all posts filed under Editorial">Editorial</a></li>
+                            <li class="cat-item"><a href="/label/fashion/" title="View all posts filed under Fashion">Fashion</a></li>
+                            <li class="cat-item"><a href="/label/haskell/" title="View all posts filed under Haskell">Haskell</a></li>
+                            <li class="cat-item"><a href="/label/pydata/" title="View all posts filed under Life on PyData">PyData</a></li>
+                            <li class="cat-item"><a href="/label/tutorial/" title="View all posts filed under Tutorial">Tutorial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <hr class="hide">
+        <br class="clear">
+    </body>
+    <script type="text/plain" src="/css/prettyPrint.js"></script>
+</html>

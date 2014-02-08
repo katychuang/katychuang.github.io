@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Kat Y. Chuang, Ph.D.">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+        <title>Picture Dictionary App</title>
+        <link rel="stylesheet" type="text/css" href="/css/hemingway.css" />
+        <link rel="stylesheet" type="text/css" href="/css/white.css" />
+        <link rel="stylesheet" id="style-css" href="/css/social-icons.css" type="text/css" media="all">
+
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito%3A300&amp;ver=20121005" type="text/css" media="all">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-2990063-3'], ['_trackPageview']];
+            (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="inside">
+                <div id="search">
+                    <form method="get" id="sform" action="/search.html">
+                        <input type="text" id="q" value name="q" size="20" class="searchbox" />
+                        <div class="searchimg"></div>
+                    </form>
+                </div>
+
+                <h2><a href="/">Kat Chuang</a></h2>
+                <div class="links">
+                    <!--a href="mailto:person" class="toplink" target="_blank"><img src="/images/email.png" /></a-->
+                </div>
+                <div id="social">
+                    <a href="https://twitter.com/katychuang" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+                    <a href="https://plus.google.com/108870060325793264627" rel="tooltip" title="G+" class="googleplus">G+</a>
+                    <a href="https://github.com/katychuang" rel="tooltip" title="Github" class="github">Github</a>
+                    <a href="http://katychuang.wordpress.com" class="wordpress"></a>
+                    <a href="http://www.delicious.com/katsupnfries" rel="tooltip" title="Delicious" class="delicious">Delicious</a>
+                    <a href="http://www.youtube.com/katsupnfries" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+                    <a href="http://www.pinterest.com/katychuang" rel="tooltip" title="Pintrest" class="pintrest">Pinterest</a>
+                    <a href="https://www.linkedin.com/in/katychuang" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+                    <a href="http://context.katychuang.com" class="tumblr"></a>
+                    <a href="http://forrst.com/people/katychuang" class="forrst"></a>
+                    <a href="http://stackoverflow.com/users/1470114/katychuang" class="stackoverflow"></a>
+                    <a href="http://instagram.com/katsupnfries" class="instagram"></a>
+                    <a href="http://flickr.com/photos/katychuang" class="flickr"></a>
+                </div>
+                <div class="meetuplinks">
+                    <ul>
+                      <li>Find me at: </li>
+                      <li><a href="http://haskell-workshop.github.io">Haskell Workshop</a></li>
+                      <li><a href="http://nycpython.com">NYC PUG</a></li>
+                      <li><a href="http://meetup.com/nyc-pyladies">NYC PyLadies</a></li>
+                      <li><a href="http://meetup.com/nyc-open-data">NYC Open Data</a></li>
+                      <li><a href="http://pydata.org">PyData</a></li>
+                      <li><a href="http://sbp-conference.org">SBP Conference</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Picture Dictionary App</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on May  4, 2013 with labels: <a href="/label/tutorial/">tutorial</a></i>
+        </small></div>
+        <br>
+        <p>This post will be about the django-snapbook code: https://github.com/katychuang/django-snapbook</p>
+<p>For the Techcrunch Hackathon, I worked on a picture dictionary. This was to help me practice connecting with APIs and displaying them in a useful fashion.</p>
+<script async class="speakerdeck-embed" data-id="b0a37bb0975601305fca46a246d4a0f6" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>I chose to use Pearson’s api for dictionary definitions of official English language words. Tumblr was selected for displaying photos because it’s known as a hipster platform and because people tag photos with everyday language including slang. I chose to display NY Times articles so that people can read more about the term.</p>
+<h1 id="how-might-you-use-this-app">How might you use this app?</h1>
+<p>In essence, it’s an educational tool. Here are some examples of usage:</p>
+<h2 id="style">1. Style</h2>
+<p>A popular shoe style coming into trend is “wingtip” and often known as an oxford shoe. WIth the app, you can search for this term and see that it isn’t an official word in a dictionary but people refer to this style, as shown by the images and the news articles. <img src="https://lh3.googleusercontent.com/-CRsiKgsSFiQ/UYXCiqA0FII/AAAAAAAAINQ/Cm4_7HfymNs/w642-h547/styleA2.png" /></p>
+<p>Similarly, the trend known as “french cuff” is coming into season. It typically refers to a type of sleeve cuff for mens dress shirt. But this term can also refer to extravagant choker necklaces. <img src="https://lh5.googleusercontent.com/-GY6dRFBr1ww/UYXCi3QD4jI/AAAAAAAAINY/UQ8ZQLhQeKk/w642-h547/styleB2.png" /></p>
+<p>Another style, shabby chic, is mainly a concept for interior decorating. It is something that people like to share pictures of as evidence by pictures of various parts of peoples homes, all with floral theme. <img src="https://lh4.googleusercontent.com/-xqR7bnNjgAA/UYXCjSEZkjI/AAAAAAAAINU/WKkEFhm_K6k/w601-h547/styleC2.png" /></p>
+<h2 id="concepts">2. Concepts</h2>
+<p>A picture dictionary can best be tested with a “concept” word that can connect with the viewer visually. You can see from the pictures that people consider bright colors as an aspect of euphoria. One person believes starbucks frappacino to be a euphoric.. potentially an angle of using a picture dictionary based on social API is to show marketing terms and colors that could be used in advertisements. <img src="https://lh5.googleusercontent.com/-LYY_aItur6M/UYXChZRqndI/AAAAAAAAIMw/JTfzz7feenQ/w601-h547/conceptA2.png" /></p>
+<h2 id="people">3. People</h2>
+<p>Some people receive a great deal of fame shortly after appearing on a reality tv show. This use case was to show how one such reality star is a recognizable entity on social media and a newspaper website. The dictionary does not yet recognize this person. The person’s nick name brings out mostly opion articles. <img src="https://lh3.googleusercontent.com/-Jx0y6DM4qLA/UYXCh38jUxI/AAAAAAAAINM/D7xPznNHMp4/w642-h547/personB2.png" /></p>
+<p>There exists a famous rapper from NYC. The dictionary recognizes his name (though not part of speech), Tumblr users share flattering photos of this person, and the news paper has articles about this celebrity in connection with events cush as “Global Poverty Project benefit concert” <img src="https://lh6.googleusercontent.com/-TQuh-fL2Iy8/UYXCnnI_-OI/AAAAAAAAINg/2mwkNnqqPV4/w631-h547/Screen+Shot+2013-05-04+at+10.22.45+PM.png" /></p>
+<h2 id="cats">4. Cats</h2>
+<p>Internet and cats are synonymous. This last usecase was to show the connection between “cat” images and news articles. Would the everyday tumblr user consider the concept the same as the official definition, and would that overlap with professional journalists’ use of the terms? When a friend looked at the results he pointed out the article on bipolar disorder. His words, “I’m not surprised by this connection.” <img src="https://lh4.googleusercontent.com/-STCGHrY23_A/UYXChqFxa2I/AAAAAAAAINA/vlyV8XiKaPI/w642-h547/p2.png" /></p>
+    </div>
+</div>
+
+<hr class="hide">
+
+<div id="secondary">
+    <div class="inside">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'katychuang'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+<hr class="hide">
+
+
+        <div id="ancillary">
+            <div class="inside">
+                <div class="block first">
+                    <div class="widget">
+                        <h2>Sections</h2>
+                        <div class="menu-pages-container">
+                            <ul id="menu-pages" class="menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/colophon/">Colophon</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/portfolio/">Portfolio</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/talks/">Talks</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/writings/">Writings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="textwidget">
+                            <small>Made with <a href="http://jaspervdj.be/hakyll/" class="links">Hakyll</a>. Hosted on <a href="http://github.com" class="links">Github</a>.</small><br />
+                            <small>© Katherine Y. Chuang, Ph.D.</small>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <br>
+                        <a href="/rss.xml" class="toplink" target="_blank"><img src="/images/rss.png"></a>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Recent Articles</h2>
+                        <ul>
+                            <li><a href="/2014/01/web-dev-tools/" title="Essential Tools for Web Development">Essential Tools for Web Development</a></li>
+<li><a href="/2013/12/haskell/" title="Hakyll">Hakyll</a></li>
+<li><a href="/2013/12/recap/" title="Year of Code">Year of Code</a></li>
+<li><a href="/2013/12/sbp/" title="Intro to Behavior-Cultural Modeling &amp; Prediction">Intro to Behavior-Cultural Modeling &amp; Prediction</a></li>
+<li><a href="/2013/11/technical-writing/" title="Technical writing tip">Technical writing tip</a></li>
+<li><a href="/2013/11/django-apis/" title="Django + APIs  for online communities">Django + APIs  for online communities</a></li>
+<li><a href="/2013/10/planning-workshops/" title="Tips for planning a workshop">Tips for planning a workshop</a></li>
+
+                        </ul>
+                        <div class="textwidget">
+                            <a href="/archive/" class="readmore">see all</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li class="cat-item"><a href="/label/beauty/" title="View all posts filed under beauty">Beauty</a></li>
+                            <li class="cat-item"><a href="/label/editorial/" title="View all posts filed under Editorial">Editorial</a></li>
+                            <li class="cat-item"><a href="/label/fashion/" title="View all posts filed under Fashion">Fashion</a></li>
+                            <li class="cat-item"><a href="/label/haskell/" title="View all posts filed under Haskell">Haskell</a></li>
+                            <li class="cat-item"><a href="/label/pydata/" title="View all posts filed under Life on PyData">PyData</a></li>
+                            <li class="cat-item"><a href="/label/tutorial/" title="View all posts filed under Tutorial">Tutorial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <hr class="hide">
+        <br class="clear">
+    </body>
+    <script type="text/plain" src="/css/prettyPrint.js"></script>
+</html>

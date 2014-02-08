@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Kat Y. Chuang, Ph.D.">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+        <title>Cluster Analysis on Course Descriptions</title>
+        <link rel="stylesheet" type="text/css" href="/css/hemingway.css" />
+        <link rel="stylesheet" type="text/css" href="/css/white.css" />
+        <link rel="stylesheet" id="style-css" href="/css/social-icons.css" type="text/css" media="all">
+
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display" type="text/css" media="all">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito%3A300&amp;ver=20121005" type="text/css" media="all">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-2990063-3'], ['_trackPageview']];
+            (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="inside">
+                <div id="search">
+                    <form method="get" id="sform" action="/search.html">
+                        <input type="text" id="q" value name="q" size="20" class="searchbox" />
+                        <div class="searchimg"></div>
+                    </form>
+                </div>
+
+                <h2><a href="/">Kat Chuang</a></h2>
+                <div class="links">
+                    <!--a href="mailto:person" class="toplink" target="_blank"><img src="/images/email.png" /></a-->
+                </div>
+                <div id="social">
+                    <a href="https://twitter.com/katychuang" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+                    <a href="https://plus.google.com/108870060325793264627" rel="tooltip" title="G+" class="googleplus">G+</a>
+                    <a href="https://github.com/katychuang" rel="tooltip" title="Github" class="github">Github</a>
+                    <a href="http://katychuang.wordpress.com" class="wordpress"></a>
+                    <a href="http://www.delicious.com/katsupnfries" rel="tooltip" title="Delicious" class="delicious">Delicious</a>
+                    <a href="http://www.youtube.com/katsupnfries" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+                    <a href="http://www.pinterest.com/katychuang" rel="tooltip" title="Pintrest" class="pintrest">Pinterest</a>
+                    <a href="https://www.linkedin.com/in/katychuang" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+                    <a href="http://context.katychuang.com" class="tumblr"></a>
+                    <a href="http://forrst.com/people/katychuang" class="forrst"></a>
+                    <a href="http://stackoverflow.com/users/1470114/katychuang" class="stackoverflow"></a>
+                    <a href="http://instagram.com/katsupnfries" class="instagram"></a>
+                    <a href="http://flickr.com/photos/katychuang" class="flickr"></a>
+                </div>
+                <div class="meetuplinks">
+                    <ul>
+                      <li>Find me at: </li>
+                      <li><a href="http://haskell-workshop.github.io">Haskell Workshop</a></li>
+                      <li><a href="http://nycpython.com">NYC PUG</a></li>
+                      <li><a href="http://meetup.com/nyc-pyladies">NYC PyLadies</a></li>
+                      <li><a href="http://meetup.com/nyc-open-data">NYC Open Data</a></li>
+                      <li><a href="http://pydata.org">PyData</a></li>
+                      <li><a href="http://sbp-conference.org">SBP Conference</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="primary">
+    <div class="inside">
+        <h1 style="margin-bottom:10px">Cluster Analysis on Course Descriptions</h1>
+        <div style="opacity:0.8;"><small>
+            <i>Posted on January  8, 2008 with labels: <a href="/label/pydata/">pydata</a></i>
+        </small></div>
+        <br>
+        <h3>
+Introduction
+</h3>
+
+<p>A study on course descriptions can reveal a general overview of topics taught in a particular graduate program (i.e. Drexel’s iSchool) or even track educational trends. Unfortunately, the process of manually collecting a large dataset can be tedious. As a solution, information extraction can accelerate data collection by reading unstructured text and converting to database form.</p>
+<p>For this class project, I would like to find out if Drexel IST courses can be separated into distinct subject categories. The themes may not be apparent to someone who wants an overview of number of courses per specialty. This project incorporates some simple information extraction techniques for collecting data. In addition, hierarchical cluster analysis will be performed to identify the major sub-groups.</p>
+<p>The results of this analysis can be potentially useful for those interested in the education of information professionals, namely: educators interested in educational trends and potential students applying to programs. The results may also be useful for evaluating the wording of each course (i.e. some descriptions may be too vague). A brief literature review shows that there exist previous projects and published research on information extraction .</p>
+Definitions
+<ul>
+<li>
+Information extraction: The process of filling the fields and records of a database from unstructured or loosely formatted text.
+</li>
+<li>
+Content analysis: This is used to determine the presence of certain words or concepts within text. It quantifies the concepts based on existence or frequency of terms.
+</li>
+<li>
+Hierarchical Cluster Analysis: Classifying of objects into different groups (clusters), so that the data in each subset (ideally) share some common. Hierarchical algorithms find successive clusters using previously established clusters, whereas partitional algorithms determine all clusters at once.
+</li>
+</ul>
+
+<h3>
+Approach
+</h3>
+
+<p>The research question for this project is as follows: What are the major categories of courses provided by the iSchool at Drexel University? The answer to this question may be answered by using the following two step approach: (1) data collection using information extraction, (2) analysis of word frequencies using content analysis, and (3) analysis of course similarity based on word occurrences using cluster analysis. This approach was selected because it fits the type of problem presented. The findings from analysis will be described in the next section.</p>
+<p>Step 1 Data Collection</p>
+<p>I wrote a JAVA program using the porter stemming algorithm to read a web page listing course descriptions . The output of this program segmented the text to find the course numbers, course names and course descriptions of those offered by Drexel IST. Each of the words in the course description was stemmed using a stemming algorithm prior to building the dictionary of variables (unique terms). Stop words such as (and, of, the, on, new, etc) were excluded.</p>
+<p>Step 2 Analysis of Word Frequencies</p>
+<p>I wrote a second JAVA program to tally the frequencies of words in a matrix format (figure 1). The dictionary from before was incorporated into this process of breaking text into tokens and seeing if they were in the dictionary. Each word in the dictionary represents a column in the matrix shown below. The disadvantage to using words instead of phrases is some information loss on concepts. For instance, “information systems” have a different meaning from “information”. The advantage of using a JAVA program is the matrix of word frequencies was constructed quickly.</p>
+<p><img src="http://farm9.staticflickr.com/8382/8608106560_7fc487ddf1_o.png"> Figure1. Matrix of Word Occurrences</p>
+<p>Step 3 Analysis of Course Similarities</p>
+<p>Once the matrix was imported into SPSS, hierarchical cluster analysis was selected with the following settings of: complete linkage (furthest neighbor) method, Pearson correlation measure, and no standardization of values. Those particular settings are used because they generated a dendrogram with fairly even clusters (see appendix).</p>
+<p>Results</p>
+<p>What I learned from this project on creating a web crawler to extract web information barely scratched the surface of this research area. I encountered several challenges with creating the JAVA program because of my lack of skills and knowledge about particular information extraction algorithms. This leads me to the conclusion that it would be very useful to have a text mining background. Results from each step are described below.</p>
+<p>Data Collection</p>
+<p>There are 55 ALA-approved LIS programs, each with a different format of displaying course information. Thus, this project only looks at Drexel graduate iSchool courses. There were a total of 86 master and doctoral courses in this program; however, INFO 998 Dissertation Study was not included in the data analysis because it is assumed that such an independent study would be fundamentally different from lecture classes. For each course, information about the course number, course title and description were collected.</p>
+<p>Content Analysis</p>
+<p>685 variables were found based on words that appear in all the course descriptions, but excluding stop words. The frequencies of how many times each word appeared in a course description was recorded and presented in matrix form (figure 1).</p>
+<p>Cluster Analysis</p>
+<p>Hierarchical cluster analysis was done on 85 master and doctoral level courses. The result showed 6 major clusters: Basic courses, Advanced Courses, Special Librarianship, Information Systems, HCI, and Software Engineering. The appendix contains a list of the courses in each cluster. It is apparent that some of these clusters can be separated into subgroups, but that was not done for this analysis.</p>
+<p>Discussion</p>
+<p>This project was a way to practice multivariate analysis on a large dataset as well as try my hand at creating a web crawler. In the beginning, the tentative research question began as, “What are ALA-approved LIS program specialties based on an analysis of course descriptions?” However, since the parsing step was very difficult, the project was scaled down to just analyzing Drexel’s courses.</p>
+<p>If the analysis was done between multiple library and information science programs, you would be able to see that some programs are more similar than other programs based on material taught. For instance, two schools known for cataloging and archives would be a lot closer together in similarity than the third on informatics. However, this analysis was done on one school, so we can look for clusters within the course offerings.</p>
+<p>It turns out that the 6 clusters in the results correspond fairly close to the specializations offered in this program. The specializations in the library and information science program include Digital Libraries, Youth Services, Library &amp; Information Services, School Library Media Program, and Competitive Intelligence. Drexel also offers degrees in Software Engineering and Information Systems. The chart in the appendix shows courses from each cluster that matches with specializations.</p>
+<p>There are many web mining applications using both cluster analysis and information extraction. In an interview, two leading researchers mention that “Cluster analysis is an important tool for information extraction in data mining. It groups similar objects together according to their attributes or behavior.” Other domains where this may be useful include job search (flipdog.com), information about people (zoominfo.com), citation information (citeseer.org), medical insurance claim forms (verity.com) and email messages .</p>
+<p>Further research can be done using multidimensional scaling to visualize relationships among courses, and possibly help students and their advisors select appropriate courses. It may be a good idea to include additional information about requirements and term offerings in the information extraction process.</p>
+<p>Footnotes</p>
+<p>McCallum, Andrew. (2005). Information Extraction: Distilling Structured Data from Unstructured Text. Social Computing. 3(9).</p>
+<p>Drexel Course Descriptions http://coreapp1.drexel.edu/webcourses/CourseListing.asp?SubjCode=INFO&amp;Levl=GR&amp;univ=DREX Porter Stemming Algorithm http://tartarus.org/~martin/PorterStemmer</p>
+<ol start="2006" style="list-style-type: decimal">
+<li>George C. Tseng &amp; Wing H. Wong answers a few questions about this month’s fast breaking paper in the field of Mathematics. ESI Special Topics. Available at: http://esi-topics.com/fbp/2006/august06-Tseng_Wong.html McCallum, Andrew. (2005). Information Extraction: Distilling Structured Data from Unstructured Text. Social Computing. 3(9).</li>
+</ol>
+<p>Final Image <img src="http://farm9.staticflickr.com/8107/8607676801_73d51788aa_o.png"></p>
+    </div>
+</div>
+
+<hr class="hide">
+
+<div id="secondary">
+    <div class="inside">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'katychuang'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+<hr class="hide">
+
+
+        <div id="ancillary">
+            <div class="inside">
+                <div class="block first">
+                    <div class="widget">
+                        <h2>Sections</h2>
+                        <div class="menu-pages-container">
+                            <ul id="menu-pages" class="menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/colophon/">Colophon</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/portfolio/">Portfolio</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/talks/">Talks</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/writings/">Writings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="textwidget">
+                            <small>Made with <a href="http://jaspervdj.be/hakyll/" class="links">Hakyll</a>. Hosted on <a href="http://github.com" class="links">Github</a>.</small><br />
+                            <small>© Katherine Y. Chuang, Ph.D.</small>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <br>
+                        <a href="/rss.xml" class="toplink" target="_blank"><img src="/images/rss.png"></a>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Recent Articles</h2>
+                        <ul>
+                            <li><a href="/2014/01/web-dev-tools/" title="Essential Tools for Web Development">Essential Tools for Web Development</a></li>
+<li><a href="/2013/12/haskell/" title="Hakyll">Hakyll</a></li>
+<li><a href="/2013/12/recap/" title="Year of Code">Year of Code</a></li>
+<li><a href="/2013/12/sbp/" title="Intro to Behavior-Cultural Modeling &amp; Prediction">Intro to Behavior-Cultural Modeling &amp; Prediction</a></li>
+<li><a href="/2013/11/technical-writing/" title="Technical writing tip">Technical writing tip</a></li>
+<li><a href="/2013/11/django-apis/" title="Django + APIs  for online communities">Django + APIs  for online communities</a></li>
+<li><a href="/2013/10/planning-workshops/" title="Tips for planning a workshop">Tips for planning a workshop</a></li>
+
+                        </ul>
+                        <div class="textwidget">
+                            <a href="/archive/" class="readmore">see all</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="widget">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li class="cat-item"><a href="/label/beauty/" title="View all posts filed under beauty">Beauty</a></li>
+                            <li class="cat-item"><a href="/label/editorial/" title="View all posts filed under Editorial">Editorial</a></li>
+                            <li class="cat-item"><a href="/label/fashion/" title="View all posts filed under Fashion">Fashion</a></li>
+                            <li class="cat-item"><a href="/label/haskell/" title="View all posts filed under Haskell">Haskell</a></li>
+                            <li class="cat-item"><a href="/label/pydata/" title="View all posts filed under Life on PyData">PyData</a></li>
+                            <li class="cat-item"><a href="/label/tutorial/" title="View all posts filed under Tutorial">Tutorial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <hr class="hide">
+        <br class="clear">
+    </body>
+    <script type="text/plain" src="/css/prettyPrint.js"></script>
+</html>
